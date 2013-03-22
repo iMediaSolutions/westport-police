@@ -61,10 +61,13 @@
       .question-2-checkboxes
         %ul
           %li
-            I have...
+            I have the following information based upon the attached affidavit(s), consisting of a total of 
+            %input.bare-input.number-input{:type => "number", :name => "pages"}, pages
+            %br
+            which is (are) incorporated herein by reference.
           %li
             Based upon...
-            %blockquote
+            %blockquote.tight-paragraphs
               %p
                 %input{:type => "checkbox", :name => "1"}
                 %label{:for => "1", :name => "checkbox"}

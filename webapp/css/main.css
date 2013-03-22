@@ -338,3 +338,24 @@ input {
 
 .survay-container {
   margin-left: 1em; }
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.number-input {
+  width: .5in;
+  text-align: center; }
+
+.survey-container {
+  font-size: 10pt; }
+
+.tight-paragraphs > p {
+  margin: 0px; }
+
+.bare-input {
+  border-style: none; }
+
+.inline {
+  display: inline; }
