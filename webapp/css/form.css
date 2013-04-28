@@ -34,3 +34,18 @@ input[type=number]::-webkit-inner-spin-button {
 .other {
   border-bottom: 1px solid;
   width: 5.5in; }
+
+.taform {
+  resize: none;
+  overflow-y: hidden;
+  padding: 8px;
+  resize: none;
+  border: 0px solid #ffffff;
+  background-size: 100% 30px;
+  line-height: 30px;
+  font-family: Arial, Helvetica, Sans-serif;
+  background-image: linear-gradient(white, white 29px, #f95757 29px, #f95757 30px, white 30px);
+  background-image: -o-linear-gradient(white, white 29px, #f95757 29px, #f95757 30px, white 30px);
+  background-image: -moz-linear-gradient(white, white 29px, #f95757 29px, #f95757 30px, white 30px);
+  background-image: -webkit-linear-gradient(white, white 29px, #f95757 29px, #f95757 30px, white 30px);
+  background-image: -ms-linear-gradient(white, white 29px, #f95757 29px, #f95757 30px, white 30px); }
