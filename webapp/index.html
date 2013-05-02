@@ -22,17 +22,17 @@
     <!-- Add your site or application content here -->
     <div class='border center'>
       <form action='' method='post'>
-        <div class='header'>
-          <div class='header-left pull-left box'>
-            <div class='title box-thick'>
+        <div class='header thick-bottom'>
+          <div class='header-left pull-left'>
+            <div class='title thick-left thick-right thick-top thick-bottom placement-fix override-header'>
               <h1>APPLICATION FOR SEARCH WARRANT</h1>
               <span class='center'>G.L. c. 276 1-7</span>
             </div>
-            <div class='applicant box-underline header-input-box'>
+            <div class='applicant header-input-box border-black-right thick-right thin-bottom'>
               <label for='name'>NAME OF APPLICANT</label>
               <input name='name' type='text' />
             </div>
-            <div class='applicant-position box-underline header-input-box'>
+            <div class='applicant-position header-input-box border-black-right thick-right thin-top'>
               <label for='position'>POSITION OF APPLICANT</label>
               <input name='position' type='text' />
             </div>
@@ -49,7 +49,7 @@
                 <label for='division'>DIVISION</label>
               </div>
             </div>
-            <div class='docket header-input-box box'>
+            <div class='docket header-input-box'>
               <label for='position'>SEARCH WARRANT DOCKET NUMBER</label>
               <input name='position' type='text' />
             </div>
@@ -113,7 +113,7 @@
                         (specify)
                       </i>
                     </label>
-                    <input class='other' name='6-1' type='text' />
+                    <input class='box-underline' name='6-1' type='text' />
                     <label for='1' name='6-1'></label>
                   </p>
                 </blockquote>
@@ -127,7 +127,7 @@
                     searched for as particularly as possible)
                   </i>
                   <br />
-                  <textarea class='taform' cols='70' name='ta1' rows='5'></textarea>
+                  <textarea class='taform' name='ta1' rows='5'></textarea>
                 </p>
               </li>
               <li>
@@ -146,12 +146,12 @@
                     </i>
                   </label>
                   <br />
-                  <textarea class='taform' cols='70' name='ta2' rows='2'></textarea>
+                  <textarea class='taform' name='ta2' rows='2'></textarea>
                 </p>
                 <p>
                   which is occupied by and/or in possession of:
                   <br />
-                  <textarea class='taform' cols='70' name='ta3' rows='2'></textarea>
+                  <textarea class='taform' name='ta3' rows='2'></textarea>
                 </p>
                 <p>
                   <input name='8' type='checkbox' />
@@ -160,7 +160,7 @@
                     (identify any specific person(s) to be searched):
                   </i>
                   <br />
-                  <textarea class='taform' cols='70' name='ta4' rows='1'></textarea>
+                  <textarea class='taform' name='ta4' rows='1'></textarea>
                 </p>
                 <p>
                   <input name='9' type='checkbox' />
@@ -175,16 +175,67 @@
             the above described place(s) and person(s), if any, to be searched, and directing that such property or evidnece or
             any part thereof, if found, be seized and brought before the court, together with such other and further relief that
             the court may deem property.
-            <br />
-            <input name='10' type='checkbox' />
-            have previously submitted the same application.
-            <input name='11' type='checkbox' />
-            Have
-            <b>
-              not
-            </b>
-            previously submitted the same application.
+            <blockquote class='tight-paragraphs'>
+              <p>
+                <input name='10' type='checkbox' />
+                have previously submitted the same application.
+              </p>
+              <p>
+                <input name='11' type='checkbox' />
+                Have
+                <b>
+                  not
+                </b>
+                previously submitted the same application.
+              </p>
+            </blockquote>
           </p>
+        </div>
+        <div class='foot'>
+          <div class='sig-upper thick-top'>
+            <div class='sig-upper-left pull-left thin-right'>
+              <p>
+                <label>
+                  PRINTED NAME OF APPLICANT
+                </label>
+                <br />
+                <input class='box-underline' name='12' type='text' />
+              </p>
+            </div>
+            <div class='sig-upper-right pull-right'>
+              <label>
+                SIGNED UNDER THE PENALTIES OF PERJURY
+              </label>
+              <br />
+              X
+              <input class='box-underline' name='13' type='text' />
+              <br />
+              <label>
+                Signature of Applicant
+              </label>
+            </div>
+          </div>
+          <div class='sig-lower'>
+            <div class='sig-bottom-left pull-left'>
+              <label>
+                SWORN AND SUBSCRIBED TO BEFORE
+              </label>
+              <br />
+              X
+              <input class='box-underline' name='14' type='text' />
+              <br />
+              <label>
+                Signatures of Justice, Clerk Magistrate or Assistant Clerk
+              </label>
+            </div>
+            <div class='sig-bottom-right pull-right'>
+              <input class='box-underline' name='15' type='text' />
+              <br />
+              <label>
+                Date
+              </label>
+            </div>
+          </div>
         </div>
       </form>
     </div>

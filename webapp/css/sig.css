@@ -1,0 +1,17 @@
+.foot .sig-upper-left {
+  width: 390px; }
+.foot .sig-upper-right {
+  width: 390px; }
+.foot .sig-upper {
+  height: 50px; }
+.foot .sig-lower {
+  height: 80px; }
+.foot .centercontent {
+  margin-left: auto;
+  margin-right: auto; }
+.foot .sig-bottom-left {
+  width: 60%; }
+.foot .sig-bottom-right {
+  width: 29%; }
+.foot label {
+  font-size: 7pt; }

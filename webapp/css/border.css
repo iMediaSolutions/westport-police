@@ -1,0 +1,26 @@
+.thin-bottom {
+  border-bottom: 1px solid; }
+
+.thick-bottom {
+  border-bottom: 3px solid; }
+
+.thin-top {
+  border-top: 1px solid; }
+
+.thick-top {
+  border-top: 3px solid; }
+
+.thin-left {
+  border-left: 1px solid; }
+
+.thick-left {
+  border-left: 3px solid; }
+
+.thin-right {
+  border-right: 1px solid; }
+
+.thick-right {
+  border-right: 3px solid; }
+
+.border-black-right {
+  border-right-color: black; }
