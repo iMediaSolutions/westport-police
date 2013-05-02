@@ -25,105 +25,167 @@
   
 
 
-.border.center
-  %form{ :action => "", :method => "post"}
-    .header
-      .header-left.pull-left.box
-        .title.box-thick
-          %h1 APPLICATION FOR SEARCH WARRANT
-          %span.center G.L. c. 276 1-7 
-        .applicant.box-underline.header-input-box
-          %label{:for => "name"} NAME OF APPLICANT
-          %input{:type => "text", :name => "name"}
-        .applicant-position.box-underline.header-input-box
-          %label{:for => "position"} POSITION OF APPLICANT
-          %input{:type => "text", :name => "position"}
-      .header-right.pull-right
-        .court
-          %h2 TRIAL COURT OF MASSACHUSETTS
-          .header-input-box
-            %input.box-underline{:type => "text", :name => "court_department"}
-            %label{:for => "court_department"} COURT DEPARTMENT
-          .header-input-box
-            %input.box-underline{:type => "text", :name => "division"}
-            %label{:for => "division"} DIVISION
+    .border.center
+      %form{ :action => "", :method => "post"}
+        .header.thick-bottom
+          .header-left.pull-left
+            .title.thick-left.thick-right.thick-top.thick-bottom.placement-fix.override-header
+              %h1 APPLICATION FOR SEARCH WARRANT
+              %span.center G.L. c. 276 1-7 
+            .applicant.header-input-box.border-black-right.thick-right.thin-bottom
+              %label{:for => "name"} NAME OF APPLICANT
+              %input{:type => "text", :name => "name"}
+            .applicant-position.header-input-box.border-black-right.thick-right.thin-top
+              %label{:for => "position"} POSITION OF APPLICANT
+              %input{:type => "text", :name => "position"}
+          .header-right.pull-right
+            .court
+              %h2 TRIAL COURT OF MASSACHUSETTS
+              .header-input-box
+                %input.box-underline{:type => "text", :name => "court_department"}
+                %label{:for => "court_department"} COURT DEPARTMENT
+              .header-input-box
+                %input.box-underline{:type => "text", :name => "division"}
+                %label{:for => "division"} DIVISION
 
-        .docket.header-input-box.box
-          %label{:for => "position"} SEARCH WARRANT DOCKET NUMBER
-          %input{:type => "text", :name => "position"}
-      .clearfix
-    .survay-container
-      %p
-        I, the undersigned
-        %b APPLICANT,
-        being duly sworn, depose and say that:
-      
-      .questions
-        %ol
-          %li
-            I have the following information based upon the attached affidavit(s), consisting of a total of 
-            %input.bare-input.number-input{:type => "number", :name => "pages"}, pages
-            %br
-            which is (are) incorporated herein by reference.
-          %li
-            Based upon this information, there is
-            %b PROBABLE CAUSE
-            to believe that the property described below:
+            .docket.header-input-box
+              %label{:for => "position"} SEARCH WARRANT DOCKET NUMBER
+              %input{:type => "text", :name => "position"}
+          .clearfix
+        .survay-container
+          %p
+            I, the undersigned
+            %b APPLICANT,
+            being duly sworn, depose and say that:
+          
+          .questions
+            %ol
+              %li
+                I have the following information based upon the attached affidavit(s), consisting of a total of 
+                %input.bare-input.number-input{:type => "number", :name => "pages"}, pages
+                %br
+                which is (are) incorporated herein by reference.
+              %li
+                Based upon this information, there is
+                %b PROBABLE CAUSE
+                to believe that the property described below:
+                %blockquote.tight-paragraphs
+                  %p
+                    %input{:type => "checkbox", :name => "1"}
+                    %label{:for => "1", :name => "1"}
+                      has been stolen, embezzled, or obtained by false pretenses.
+
+                  %p
+                    %input{:type => "checkbox", :name => "2"}
+                    %label{:for => "1", :name => "2"}
+                      is intended for use or has been used as the means of committing a crime.
+
+                  %p
+                    %input{:type => "checkbox", :name => "3"}
+                    %label{:for => "1", :name => "3"}
+                      has been concealed to prevent a crime from being discovered.
+                  %p
+                    %input{:type => "checkbox", :name => "4"}
+                    %label{:for => "1", :name => "4"}
+                      is unlawfully possessed or concealed for an unlawful purpose.
+                  %p
+                    %input{:type => "checkbox", :name => "5"}
+                    %label{:for => "1", :name => "5"}
+                      is evidence of a crime or is evidence of criminal activity.
+                  %p
+                    %input{:type => "checkbox", :name => "6"}
+                    %label{:for => "1", :name => "6"}
+                      other
+                      %i
+                        (specify)
+                    %input.box-underline{:type => "text", :name => "6-1"}
+                    %label{:for => "1", :name => "6-1"}
+              %li
+                %p
+                  I am seeking the issuance of a warrant to search for the following property
+                  %i
+                    (describe the property to by
+                    %br
+                    searched for as particularly as possible)
+                  %br
+                  %textarea.taform{:rows => "5", :name => "ta1"}
+              %li
+                %p
+                  Based upon this information, there is also probable cause to believe 
+                  that the property may be found
+                  %i
+                    (check as may as apply)
+                  %br
+                  %input{:type => "checkbox", :name => "7"}
+                  %label{:for => "1", :name => "7"}
+                    as
+                    %i
+                      (identify the exact location or description of the place(s) to be searched):
+                  %br
+                  %textarea.taform{:rows => "2", :name => "ta2"}
+                    
+                %p
+                  which is occupied by and/or in possession of:
+                  %br
+                  %textarea.taform{:rows => "2", :name => "ta3"}
+                %p
+                  %input{:type => "checkbox", :name => "8"}
+                  on the person or in the possession of 
+                  %i
+                    (identify any specific person(s) to be searched):
+                  %br
+                  %textarea.taform{:rows => "1", :name => "ta4"}
+                %p
+                  %input{:type => "checkbox", :name => "9"}
+                  on any person present who may be found to have such property in his or hear possession 
+                  or under his or her control or to whome such a property may have been delivered.
+          %p
+            THEREFORE, I respectfully request that the court issue a Warrant and order of seizure, authorizing the search of
+            the above described place(s) and person(s), if any, to be searched, and directing that such property or evidnece or
+            any part thereof, if found, be seized and brought before the court, together with such other and further relief that 
+            the court may deem property.
             %blockquote.tight-paragraphs
               %p
-                %input{:type => "checkbox", :name => "1"}
-                %label{:for => "1", :name => "1"}
-                  has been stolen, embezzled, or obtained by false pretenses.
-
+                %input{:type => "checkbox", :name => "10"}
+                have previously submitted the same application.
               %p
-                %input{:type => "checkbox", :name => "2"}
-                %label{:for => "1", :name => "2"}
-                  is intended for use or has been used as the means of committing a crime.
-
+                %input{:type => "checkbox", :name => "11"}
+                Have
+                %b
+                  not
+                previously submitted the same application.
+        .foot
+          .sig-upper.thick-top
+            .sig-upper-left.pull-left.thin-right
               %p
-                %input{:type => "checkbox", :name => "3"}
-                %label{:for => "1", :name => "3"}
-                  has been concealed to prevent a crime from being discovered.
-              %p
-                %input{:type => "checkbox", :name => "4"}
-                %label{:for => "1", :name => "4"}
-                  is unlawfully possessed or concealed for an unlawful purpose.
-              %p
-                %input{:type => "checkbox", :name => "5"}
-                %label{:for => "1", :name => "5"}
-                  is evidence of a crime or is evidence of criminal activity.
-              %p
-                %input{:type => "checkbox", :name => "6"}
-                %label{:for => "1", :name => "6"}
-                  other
-                  %i
-                    (specify)
-                %input.other{:type => "text", :name => "6-1"}
-                %label{:for => "1", :name => "6-1"}
-          %li
-            %p
-              I am seeking the issuance of a warrant to search for the following property
-              %i
-                (describe the property to by
+                %label
+                  PRINTED NAME OF APPLICANT
                 %br
-                searched for as particularly as possible)
-            - 5.times do
-              %input.text-line{:type => "text", :name => ""}
-          %li
-            %p
-              Based upon this information, there is also probable cause to believe 
-              that the property may be found
-              %i
-                (check as may as apply)
+                %input.box-underline{:type => "text", :name => "12"}
+            .sig-upper-right.pull-right
+              %label
+                SIGNED UNDER THE PENALTIES OF PERJURY
               %br
-              %input{:type => "checkbox", :name => "6"}
-              %label{:for => "1", :name => "6"}
-                as
-                %i
-                  (identify the exact location or description of the place(s) to be searched):
-
-              - 2.times do
-                %input.text-line{:type => "text", :name => ""}
+              X
+              %input.box-underline{:type => "text", :name => "13"}
+              %br
+              %label
+                Signature of Applicant
+          .sig-lower
+            .sig-bottom-left.pull-left
+              %label
+                SWORN AND SUBSCRIBED TO BEFORE
+              %br
+              X
+              %input.box-underline{:type => "text", :name => "14"}
+              %br
+              %label
+                Signatures of Justice, Clerk Magistrate or Assistant Clerk
+            .sig-bottom-right.pull-right
+              %input.box-underline{:type => "text", :name => "15"}
+              %br
+              %label
+                Date
 
     -#:javascript
       window.jQuery || document.write('<\/script>')

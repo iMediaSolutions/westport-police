@@ -14,9 +14,6 @@
 .box-underline {
   border-bottom: 1px solid; }
 
-.header {
-  border: 2px solid; }
-
 .header-left {
   width: 11.4cm; }
 
@@ -102,3 +99,6 @@ input {
 
 .survay-container {
   margin-left: 1em; }
+
+.override-header {
+  width: 90%; }
