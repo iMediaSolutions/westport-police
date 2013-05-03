@@ -36,7 +36,7 @@ input[type=number]::-webkit-inner-spin-button {
   width: 5.5in; }
 
 .taform {
-  width: 80%;
+  width: 90%;
   resize: none;
   overflow-y: hidden;
   border: 0px solid #ffffff;
@@ -50,5 +50,11 @@ input[type=number]::-webkit-inner-spin-button {
   background-image: -ms-linear-gradient(white, white 20px, #a34719 19px, #a34719 20px); }
 
 .placement-fix {
-  padding-left: 3px;
-  padding-top: 0px; }
+  margin-left: 0.5px; }
+
+.override-header {
+  width: 99.9%; }
+
+.input-underline {
+  border-bottom: 1px solid #A34719;
+  width: 80%; }

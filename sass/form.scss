@@ -39,7 +39,7 @@ input[type=number]::-webkit-inner-spin-button {
 //Some aspects need to be fine tuned still
 .taform
 {
-  width:80%;
+  width:90%;
   resize: none;
   overflow-y: hidden;
   border: 0px solid #ffffff;
@@ -55,6 +55,16 @@ input[type=number]::-webkit-inner-spin-button {
 
 .placement-fix
 {
-  padding-left: 3px;
-  padding-top: 0px;
+  margin-left: 0.5px;
+}
+
+.override-header
+{
+  width: 99.9%;
+}
+
+.input-underline
+{
+  border-bottom: 1px solid #A34719;
+  width: 80%;
 }

@@ -1,16 +1,20 @@
 .foot .sig-upper-left {
-  width: 390px; }
+  width: 390px;
+  padding-left: 6px; }
 .foot .sig-upper-right {
   width: 390px; }
 .foot .sig-upper {
   height: 50px; }
+.foot .sig-upper > div {
+  height: 97.6%; }
 .foot .sig-lower {
   height: 80px; }
 .foot .centercontent {
   margin-left: auto;
   margin-right: auto; }
 .foot .sig-bottom-left {
-  width: 60%; }
+  width: 60%;
+  padding-left: 25px; }
 .foot .sig-bottom-right {
   width: 29%; }
 .foot label {

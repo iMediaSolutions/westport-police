@@ -32,14 +32,14 @@
             .title.thick-left.thick-right.thick-top.thick-bottom.placement-fix.override-header
               %h1 APPLICATION FOR SEARCH WARRANT
               %span.center G.L. c. 276 1-7 
-            .applicant.header-input-box.border-black-right.thick-right.thin-bottom
+            .applicant.header-input-box.border-black-right.thick-right.thin-bottom.header-left-width
               %label{:for => "name"} NAME OF APPLICANT
               %input{:type => "text", :name => "name"}
-            .applicant-position.header-input-box.border-black-right.thick-right.thin-top
+            .applicant-position.header-input-box.border-black-right.thick-right.thin-top.header-left-width
               %label{:for => "position"} POSITION OF APPLICANT
               %input{:type => "text", :name => "position"}
           .header-right.pull-right
-            .court
+            .court.thin-bottom.header-right-upper
               %h2 TRIAL COURT OF MASSACHUSETTS
               .header-input-box
                 %input.box-underline{:type => "text", :name => "court_department"}
@@ -48,7 +48,7 @@
                 %input.box-underline{:type => "text", :name => "division"}
                 %label{:for => "division"} DIVISION
 
-            .docket.header-input-box
+            .docket.header-input-box.thin-top
               %label{:for => "position"} SEARCH WARRANT DOCKET NUMBER
               %input{:type => "text", :name => "position"}
           .clearfix
@@ -98,7 +98,7 @@
                       other
                       %i
                         (specify)
-                    %input.box-underline{:type => "text", :name => "6-1"}
+                    %input.input-underline{:type => "text", :name => "6-1"}
                     %label{:for => "1", :name => "6-1"}
               %li
                 %p
@@ -155,34 +155,35 @@
                   not
                 previously submitted the same application.
         .foot
-          .sig-upper.thick-top
+          .sig-upper.thick-top.thin-bottom
             .sig-upper-left.pull-left.thin-right
-              %p
-                %label
-                  PRINTED NAME OF APPLICANT
-                %br
-                %input.box-underline{:type => "text", :name => "12"}
+              %label
+                PRINTED NAME OF APPLICANT
+              %br
+              %input.input-underline{:type => "text", :name => "12"}
             .sig-upper-right.pull-right
               %label
                 SIGNED UNDER THE PENALTIES OF PERJURY
               %br
-              X
-              %input.box-underline{:type => "text", :name => "13"}
+              %b
+                X
+              %input.input-underline{:type => "text", :name => "13"}
               %br
               %label
                 Signature of Applicant
-          .sig-lower
+          .sig-lower.thin-top
             .sig-bottom-left.pull-left
               %label
                 SWORN AND SUBSCRIBED TO BEFORE
               %br
-              X
-              %input.box-underline{:type => "text", :name => "14"}
+              %b
+                X
+              %input.input-underline{:type => "text", :name => "14"}
               %br
               %label
                 Signatures of Justice, Clerk Magistrate or Assistant Clerk
             .sig-bottom-right.pull-right
-              %input.box-underline{:type => "text", :name => "15"}
+              %input.input-underline{:type => "text", :name => "15"}
               %br
               %label
                 Date
