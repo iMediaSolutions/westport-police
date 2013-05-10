@@ -42,15 +42,18 @@ input[type=number]::-webkit-inner-spin-button {
   border: 0px solid #ffffff;
   background-size: 100% 20px;
   line-height: 20px;
-  font-family: Arial, Helvetica, Sans-serif;
-  background-image: linear-gradient(white, white 19px, #a34719 19px, #a34719 20px);
-  background-image: -o-linear-gradient(white, white 19px, #a34719 19px, #a34719 20px);
-  background-image: -moz-linear-gradient(white, white 19px, #a34719 19px, #a34719 20px);
-  background-image: -webkit-linear-gradient(white, white 19px, #a34719 19px, #a34719 20px);
-  background-image: -ms-linear-gradient(white, white 20px, #a34719 19px, #a34719 20px); }
+  font-family: Arial, Helvetica, Sans-serif; }
+
+.lines {
+  background-image: repeating-linear-gradient(white, white 19px, #a34719 19px, #a34719 20px) !important;
+  background-image: -o-repeating-linear-gradient(white, white 19px, #a34719 19px, #a34719 20px) !important;
+  background-image: -moz-repeating-linear-gradient(white, white 19px, #a34719 19px, #a34719 20px) !important;
+  background-image: -webkit-repeating-linear-gradient(white, white 19px, #a34719 19px, #a34719 20px) !important;
+  background-image: -ms-repeating-linear-gradient(white, white 20px, #a34719 19px, #a34719 20px) !important;
+  -webkit-print-color-adjust: exact; }
 
 .placement-fix {
-  margin-left: 0.5px; }
+  margin-left: 0cm; }
 
 .override-header {
   width: 99.9%; }

@@ -234,6 +234,11 @@ textarea {
   h3 {
     page-break-after: avoid; } }
 
+
+  ul
+  {
+    list-style-type: none;
+  }
 @import "header";
 @import "form";
 @import "border";
