@@ -23,7 +23,11 @@ $brown : #A34719;
   width: 11.4cm;
 }
 .header-left > div {
-  width: 99.9%;
+  height: 99.4%;
+}
+.header-left-width
+{
+  width: 100.5%;
 }
 .box {
   border: 1px solid;
@@ -47,12 +51,16 @@ $brown : #A34719;
   margin-left: 1em;
 }
 .header-right {
-  width: 9.8cm;
+  width: 10.05cm;
+}
+.header-right-upper
+{
+  height:2.43cm;
+  padding-left: 10px;
+  padding-top: 2px;
 }
 .docket {
   width: 381px;
-  margin-left: -10px;
-  margin-top: 14px;
 }
 .header-input-box {
   display: inline-block;
@@ -113,7 +121,18 @@ input {
   margin-left: 1em;
 }
 
-.override-header
+.p2
 {
-  width: 90%
+  margin-top: 2cm;
+}
+
+.p2 .header
+{
+  height: 3.55cm;
+}
+
+.p2 .header-left
+{
+  height: 96.9%;
+  width: 11.34cm;
 }

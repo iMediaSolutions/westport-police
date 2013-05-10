@@ -4,6 +4,7 @@
 .sig-upper-left
 {
   width:390px;
+  padding-left: 6px;
 }
 
 .sig-upper-right
@@ -14,6 +15,11 @@
 .sig-upper
 {
   height:50px;
+}
+
+.sig-upper > div
+{
+  height: 97.6%;
 }
 
 .sig-lower
@@ -30,6 +36,7 @@
 .sig-bottom-left
 {
   width: 60%;
+  padding-left: 25px;
 }
 
 .sig-bottom-right

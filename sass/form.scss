@@ -39,22 +39,37 @@ input[type=number]::-webkit-inner-spin-button {
 //Some aspects need to be fine tuned still
 .taform
 {
-  width:80%;
+  width:90%;
   resize: none;
   overflow-y: hidden;
   border: 0px solid #ffffff;
   background-size: 100% 20px;
   line-height: 20px;
   font-family: Arial, Helvetica, Sans-serif;
-  background-image: linear-gradient(white, white 19px, #A34719 19px, #A34719 20px);
-  background-image: -o-linear-gradient(white, white 19px, #A34719 19px, #A34719 20px);
-  background-image: -moz-linear-gradient(white, white 19px, #A34719 19px, #A34719 20px);
-  background-image: -webkit-linear-gradient(white, white 19px, #A34719 19px, #A34719 20px);
-  background-image: -ms-linear-gradient(white, white 20px, #A34719 19px, #A34719 20px);
+ }
+
+.lines
+{
+  background-image: repeating-linear-gradient(white, white 19px, #A34719 19px, #A34719 20px) !important;
+  background-image: -o-repeating-linear-gradient(white, white 19px, #A34719 19px, #A34719 20px) !important;
+  background-image: -moz-repeating-linear-gradient(white, white 19px, #A34719 19px, #A34719 20px) !important;
+  background-image: -webkit-repeating-linear-gradient(white, white 19px, #A34719 19px, #A34719 20px) !important;
+  background-image: -ms-repeating-linear-gradient(white, white 20px, #A34719 19px, #A34719 20px) !important;
+  -webkit-print-color-adjust: exact;
 }
 
 .placement-fix
 {
-  padding-left: 3px;
-  padding-top: 0px;
+  margin-left: 0cm;
+}
+
+.override-header
+{
+  width: 99.9%;
+}
+
+.input-underline
+{
+  border-bottom: 1px solid #A34719;
+  width: 80%;
 }
