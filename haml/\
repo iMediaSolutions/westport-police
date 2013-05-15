@@ -14,7 +14,6 @@
   / Place favicon.ico and apple-touch-icon.png in the root directory
   %link{:href => "css/normalize.css", :rel => "stylesheet"}
   %link{:href => "css/main.css", :rel => "stylesheet"}
-  %script{:src => "js/vendor/jquery-1.9.1.min.js"}
   %script{:src => "js/vendor/modernizr-2.6.2.min.js"}
   %body
     /[if lt IE 7]
@@ -32,7 +31,7 @@
           .header-left.pull-left
             .title.thick-left.thick-right.thick-top.thick-bottom.placement-fix.override-header
               %h1 APPLICATION FOR SEARCH WARRANT
-              %span.center G.L. c. 276 &sect;&sect; 1-7 
+              %span.center G.L. c. 276 1-7 
             .applicant.header-input-box.border-black-right.thick-right.thin-bottom.header-left-width
               %label{:for => "name"} NAME OF APPLICANT
               %input{:type => "text", :name => "name"}
@@ -41,9 +40,7 @@
               %input{:type => "text", :name => "position"}
           .header-right.pull-right
             .court.thin-bottom.header-right-upper
-              %h2
-                TRIAL COURT OF MASSACHUSETTS
-                %img.seal{:src => "img/state_seal_bw.jpg"}
+              %h2 TRIAL COURT OF MASSACHUSETTS
               .header-input-box
                 %input.box-underline{:type => "text", :name => "court_department"}
                 %label{:for => "court_department"} COURT DEPARTMENT
@@ -119,7 +116,7 @@
                   %br
                   %input{:type => "checkbox", :name => "8"}
                   %label{:for => "1", :name => "8-1"}
-                    at
+                    as
                     %i
                       (identify the exact location or description of the place(s) to be searched):
                   %br
@@ -135,7 +132,7 @@
                   %i
                     (identify any specific person(s) to be searched):
                   %br
-                  %input.input-underline{:type => "text", :name => "12"}
+                  %textarea.taform.lines{:rows => "1", :name => "12"}
                 %p
                   %input{:type => "checkbox", :name => "13"}
                   on any person present who may be found to have such property in his or hear possession 
@@ -155,7 +152,7 @@
                 %b
                   not
                 previously submitted the same application.
-        .foot.ffix
+        .foot
           .sig-upper.thick-top.thin-bottom
             .sig-upper-left.pull-left.thin-right
               %label{:for => "16", :name =>"16-1"}
@@ -170,7 +167,7 @@
                 X
               %input.input-underline{:type => "text", :name => "17"}
               %br
-              %label.sigapp-center{:for => "17", :name => "17-2"}
+              %label{:for => "17", :name => "17-2"}
                 Signature of Applicant
           .sig-lower.thin-top
             .sig-bottom-left.pull-left
@@ -186,17 +183,18 @@
             .sig-bottom-right.pull-right
               %input.input-underline{:type => "text", :name => "19"}
               %br
-              %label.sigdate-center{:for => "19", :name => "19-1"}
-                DATE
+              %label{:for => "19", :name => "19-1"}
+                Date
         -#Page 2
     .p2.border.center
       %form{:action => "", :method => "post"}
         .header.med-bottom
           .header-left.pull-left.thick-top.thick-right.thick-left.thin-bottom.placement-fix
-            %h1.center
-              SEARCH WARRANT
-            %span.center.title-span
-              G.L. c. 276, &sect;&sect; 1-7
+            SEARCH WARRANT
+            %br
+            G.L. c. 276, symbolx2 1-7
+            %br
+            I DEMAND MORE STYLING!
           .header-right.pull-right
             .court.thin-bottom.header-right-upper
               %h2 TRIAL COURT OF MASSACHUSETTS
@@ -212,7 +210,7 @@
               %input{:type => "text", :name => "position"}
         .survay-container
           .questions
-            %p.font-override
+            %p
               %b
                 TO THE SHERIFFS OF OUR SEVERAL COUNTIES OR THEIR DEPUTIES, ANY STATE POLICE OFFICER, OR ANY CONSTABLE OR POLICE OFFICER
                 OF ANY CITY OR TOWN, WITHIN OUR COMMONWEALTH:
@@ -256,22 +254,22 @@
               within a reasonable time and in no event later than seven days from the issuance of this search warrant
               to search for the following property:
               %p
-                %textarea.taform.lines{:rows => "5", :name => "7"}
+                %textarea.taform.lines{:rows => "5"}
                 %ul
                   %li
-                    %input{:type => "checkbox", :name => "8"}
+                    %input{:type => "checkbox"}
                     at:
                     %br
-                    %textarea.taform.lines{:rows => "2", :name => "9"}
+                    %textarea.taform.lines{:rows => "2"}
                   %li
                     which is occupied by and/or in possession of:
-                    %textarea.taform.lines{:rows => "2", :name => "10"}
+                    %textarea.taform.lines{:rows => "2"}
                   %li
-                    %input{:type =>"checkbox", :name => "11"}
+                    %input{:type =>"checkbox"}
                     on the person or in the possession of
                     %i
                       (identify any specific person(s) to be searched):
-                    %input.input-underline{:type => "text", :name => "12"}
+                    %input.input-underline{:type => "text"}
                   %li
                     %p
                       You 
@@ -303,41 +301,33 @@
                       whose possession is is found before the
                   %li
                     %p
-                      %input.box-underline.infix{:type => "text"}
+                      %input.box-underline{:type => "text"}
                       Division of the
-                      %input.box-underline.infix{:type => "text"}
+                      %input.box-underline{:type => "text"}
                       Court Department.
         .foot.thick-top
-          .sig-upper.thin-bottom
+          .sig-upper
             .sig-upper-left.pull-left.thin-right
-              %p.pfix
-                %label
-                  DATE ISSUED
-                %p.pfix
-                  %input.sifix{:type => "text"}
+              %label
+                DATE ISSUED
+              %input{:type => "text"}
             .sig-upper-right.pull-right.thin-left
-              %p.pfix
-                %label
-                  SIGNATURE OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
-                %p.pfix
-                  %b
-                    X
-                  %input.input-underline{:type => "text"}
-          .sig-lower.thin-top
-            .sig-bottom-left.pull-left.thin-right
-              %p.pfix
-                %label
-                  FIRST OR ADMINISTRATIVE JUSTICE
-                %p.pfix
-                  %b
-                    WITNESS:
-                  %input.input-underline{:type => "text"}
-            .sig-bottom-right.pull-right.thin-left
-              %p.pfix
-                %label
-                  PRINTED NAMED OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
-                %p.pfix
-                  %input.sifix{:type => "text"}
+              %label
+                SIGNATURE OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
+              %b
+                X
+              %input.input-underline{:type => "text"}
+          .sig-lower
+            .sig-bottom-left.pull-left
+              %label
+                FIRST OR ADMINISTRATIVE JUSTICE
+              %b
+                WITNESS:
+              %input.input-underline{:type => "text"}
+            .sig-bottom-right.pull-right
+              %label
+                PRINTED NAMED OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
+              %input.input-underline{:type => "text"}
     .p2.border.center
       %form{:action => "", :method => "post"}
         .survay-container
@@ -348,16 +338,16 @@
             %i
               A search warrant must be executed as soon as reasonably possible after its issuance, and in any case may not be valid executed more than 
               7 days after its issuance. The executing officer must file his or her return with the court named in the warrant within 7 days after the warrant is issued. 
-              G.L. c. 276, &sect;3A.
-          %p.p3mfix
+              G.L. c. 276, somesymbol 3A.
+          %p
             This search warrant was issued on
-            %input.box-underline.p3l1{:type => "text"},
+            %input.box-underline{:type => "text"},
+            %label
+              DATE
             20
-            %input.box-underline.p3l2{:type => "text"},
+            %input.box-underline{:type => "text"},
             and I have executed it as follows:
-          %label.labeladj
-            DATE
-          %ol.p3mfix.p3ol
+          %ol
             %li
               %input.input-underline{:type => "text"}
             %li
@@ -398,56 +388,48 @@
               %input.input-underline{:type => "text"}
             %li
               %input.input-underline{:type => "text"}
-          %label.labeladj
-            (attach additional pages as necessary)
-          %p.pfix2
+              %label
+                (attach additional pages as necessary)
+          %p
             This inventory was made in the presence of:
-            %input.input-underline.ic1{:type => "text"}
+            %input.input-underline{:type => "text"}
             %br
-            %input.input-underline.ic2{:type => "text"}
-          %p.final-statement
+            %input.input-underline{:type => "text"}
+          %p
             I swear that this inventory is a true and detailed account of all property
             taken by me on this search warrant.
         .foot2.thick-top
-          .sig-upper.thin-bottom
-            .sig-left.pull-left.thin-right
-              %p.pfix
-                %label
-                  SIGNATURE OF PERSON MAKING SEARCH
-                %p.pfix
-                  %b
-                    X
-                  %input.input-underline{:type => "text"}
-            .sig-mid.pull-left.thin-left.thin-right
-              %p.pfix
-                %label
-                  DATE AND TIME OF SEARCH
-                %p.pfix
-                  %input.sifix{:type => "text"}
-            .sig-right.pull-right.thin-left
+          .sig-upper
+            .sig-upper-left.pull-left.thin-right
+              %label
+                SIGNATURE OF PERSON MAKING SEARCH
+              %b
+                X
+              %input.input-underline{:type => "text"}
+            .sig-upper-mid.pull-left.thin-left.thin-right
+              %label
+                DATE AND TIME OF SEARCH
+              %input{:type => "text"}
+            .sig-upper-right.pull-right.thin-left
               %label
                 SWORN AND SUBSCRIBED TO BEFORE
-              %br
               %b
                 X
               %input.input-underline{:type => "text"}
               %label
                 Signature of Justice, Clerk-Magistrate or Assistant Clerk
-          .sig-lower.thin-top
-            .sig-left.pull-left.thin-right
+          .sig-lower
+            .sig-lower-left
               %label
                 PRINTED NAME OF PERSON MAKING SEARCH
-              %br
               %input{:type => "text"}
-            .sig-mid.pull-left.thin-left.thin-right
+            .sig-lower-mid
               %label
                 TITLE OF PERSON MAKING SEARCH
-              %br
               %input{:type => "text"}
-            .sig-right.pull-right.thin-left
+            .sig-lower-right
               %label
                 DATE SWORN AND SUBSCRIBED TO
-              %br
               %input{:type => "text"}
 
     -#:javascript

@@ -14,6 +14,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link href='css/normalize.css' rel='stylesheet' />
   <link href='css/main.css' rel='stylesheet' />
+  <script src='js/vendor/jquery-1.9.1.min.js'></script>
   <script src='js/vendor/modernizr-2.6.2.min.js'></script>
   <body>
     <!--[if lt IE 7]>
@@ -26,7 +27,7 @@
           <div class='header-left pull-left'>
             <div class='title thick-left thick-right thick-top thick-bottom placement-fix override-header'>
               <h1>APPLICATION FOR SEARCH WARRANT</h1>
-              <span class='center'>G.L. c. 276 1-7</span>
+              <span class='center'>G.L. c. 276 &sect;&sect; 1-7</span>
             </div>
             <div class='applicant header-input-box border-black-right thick-right thin-bottom header-left-width'>
               <label for='name'>NAME OF APPLICANT</label>
@@ -39,7 +40,10 @@
           </div>
           <div class='header-right pull-right'>
             <div class='court thin-bottom header-right-upper'>
-              <h2>TRIAL COURT OF MASSACHUSETTS</h2>
+              <h2>
+                TRIAL COURT OF MASSACHUSETTS
+                <img class='seal' src='img/state_seal_bw.jpg' />
+              </h2>
               <div class='header-input-box'>
                 <input class='box-underline' name='court_department' type='text' />
                 <label for='court_department'>COURT DEPARTMENT</label>
@@ -140,7 +144,7 @@
                   <br />
                   <input name='8' type='checkbox' />
                   <label for='1' name='8-1'>
-                    as
+                    at
                     <i>
                       (identify the exact location or description of the place(s) to be searched):
                     </i>
@@ -160,7 +164,7 @@
                     (identify any specific person(s) to be searched):
                   </i>
                   <br />
-                  <textarea class='taform lines' name='12' rows='1'></textarea>
+                  <input class='input-underline' name='12' type='text' />
                 </p>
                 <p>
                   <input name='13' type='checkbox' />
@@ -191,7 +195,7 @@
             </blockquote>
           </p>
         </div>
-        <div class='foot'>
+        <div class='foot ffix'>
           <div class='sig-upper thick-top thin-bottom'>
             <div class='sig-upper-left pull-left thin-right'>
               <label for='16' name='16-1'>
@@ -210,7 +214,7 @@
               </b>
               <input class='input-underline' name='17' type='text' />
               <br />
-              <label for='17' name='17-2'>
+              <label class='sigapp-center' for='17' name='17-2'>
                 Signature of Applicant
               </label>
             </div>
@@ -233,8 +237,8 @@
             <div class='sig-bottom-right pull-right'>
               <input class='input-underline' name='19' type='text' />
               <br />
-              <label for='19' name='19-1'>
-                Date
+              <label class='sigdate-center' for='19' name='19-1'>
+                DATE
               </label>
             </div>
           </div>
@@ -245,11 +249,12 @@
       <form action='' method='post'>
         <div class='header med-bottom'>
           <div class='header-left pull-left thick-top thick-right thick-left thin-bottom placement-fix'>
-            SEARCH WARRANT
-            <br />
-            G.L. c. 276, symbolx2 1-7
-            <br />
-            I DEMAND MORE STYLING!
+            <h1 class='center'>
+              SEARCH WARRANT
+            </h1>
+            <span class='center title-span'>
+              G.L. c. 276, &sect;&sect; 1-7
+            </span>
           </div>
           <div class='header-right pull-right'>
             <div class='court thin-bottom header-right-upper'>
@@ -271,7 +276,7 @@
         </div>
         <div class='survay-container'>
           <div class='questions'>
-            <p>
+            <p class='font-override'>
               <b>
                 TO THE SHERIFFS OF OUR SEVERAL COUNTIES OR THEIR DEPUTIES, ANY STATE POLICE OFFICER, OR ANY CONSTABLE OR POLICE OFFICER
                 OF ANY CITY OR TOWN, WITHIN OUR COMMONWEALTH:
@@ -334,25 +339,25 @@
               within a reasonable time and in no event later than seven days from the issuance of this search warrant
               to search for the following property:
               <p>
-                <textarea class='taform lines' rows='5'></textarea>
+                <textarea class='taform lines' name='7' rows='5'></textarea>
                 <ul>
                   <li>
-                    <input type='checkbox' />
+                    <input name='8' type='checkbox' />
                     at:
                     <br />
-                    <textarea class='taform lines' rows='2'></textarea>
+                    <textarea class='taform lines' name='9' rows='2'></textarea>
                   </li>
                   <li>
                     which is occupied by and/or in possession of:
-                    <textarea class='taform lines' rows='2'></textarea>
+                    <textarea class='taform lines' name='10' rows='2'></textarea>
                   </li>
                   <li>
-                    <input type='checkbox' />
+                    <input name='11' type='checkbox' />
                     on the person or in the possession of
                     <i>
                       (identify any specific person(s) to be searched):
                     </i>
-                    <input class='input-underline' type='text' />
+                    <input class='input-underline' name='12' type='text' />
                   </li>
                   <li>
                     <p>
@@ -394,9 +399,9 @@
                   </li>
                   <li>
                     <p>
-                      <input class='box-underline' type='text' />
+                      <input class='box-underline infix' type='text' />
                       Division of the
-                      <input class='box-underline' type='text' />
+                      <input class='box-underline infix' type='text' />
                       Court Department.
                     </p>
                   </li>
@@ -406,30 +411,54 @@
           </div>
         </div>
         <div class='foot thick-top'>
-          <div class='sig-upper'>
+          <div class='sig-upper thin-bottom'>
             <div class='sig-upper-left pull-left thin-right'>
-              DATE ISSUED
-              <input type='text' />
+              <p class='pfix'>
+                <label>
+                  DATE ISSUED
+                </label>
+                <p class='pfix'>
+                  <input class='sifix' type='text' />
+                </p>
+              </p>
             </div>
             <div class='sig-upper-right pull-right thin-left'>
-              SIGNATURE OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
-              <b>
-                X
-              </b>
-              <input class='input-underline' type='text' />
+              <p class='pfix'>
+                <label>
+                  SIGNATURE OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
+                </label>
+                <p class='pfix'>
+                  <b>
+                    X
+                  </b>
+                  <input class='input-underline' type='text' />
+                </p>
+              </p>
             </div>
           </div>
-          <div class='sig-lower'>
-            <div class='sig-bottom-left pull-left'>
-              FIRST OR ADMINISTRATIVE JUSTICE
-              <b>
-                WITNESS:
-              </b>
-              <input class='input-underline' type='text' />
+          <div class='sig-lower thin-top'>
+            <div class='sig-bottom-left pull-left thin-right'>
+              <p class='pfix'>
+                <label>
+                  FIRST OR ADMINISTRATIVE JUSTICE
+                </label>
+                <p class='pfix'>
+                  <b>
+                    WITNESS:
+                  </b>
+                  <input class='input-underline' type='text' />
+                </p>
+              </p>
             </div>
-            <div class='sig-bottom-right pull-right'>
-              PRINTED NAMED OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
-              <input class='input-underline' type='text' />
+            <div class='sig-bottom-right pull-right thin-left'>
+              <p class='pfix'>
+                <label>
+                  PRINTED NAMED OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
+                </label>
+                <p class='pfix'>
+                  <input class='sifix' type='text' />
+                </p>
+              </p>
             </div>
           </div>
         </div>
@@ -447,20 +476,20 @@
             <i>
               A search warrant must be executed as soon as reasonably possible after its issuance, and in any case may not be valid executed more than
               7 days after its issuance. The executing officer must file his or her return with the court named in the warrant within 7 days after the warrant is issued.
-              G.L. c. 276, somesymbol 3A.
+              G.L. c. 276, &sect;3A.
             </i>
           </p>
-          <p>
+          <p class='p3mfix'>
             This search warrant was issued on
-            <input class='box-underline' type='text'>,</input>
-            <label>
-              DATE
-            </label>
+            <input class='box-underline p3l1' type='text'>,</input>
             20
-            <input class='box-underline' type='text'>,</input>
+            <input class='box-underline p3l2' type='text'>,</input>
             and I have executed it as follows:
           </p>
-          <ol>
+          <label class='labeladj'>
+            DATE
+          </label>
+          <ol class='p3mfix p3ol'>
             <li>
               <input class='input-underline' type='text' />
             </li>
@@ -520,37 +549,52 @@
             </li>
             <li>
               <input class='input-underline' type='text' />
-              <label>
-                (attach additional pages as necessary)
-              </label>
             </li>
           </ol>
-          <p>
+          <label class='labeladj'>
+            (attach additional pages as necessary)
+          </label>
+          <p class='pfix2'>
             This inventory was made in the presence of:
-            <input class='input-underline' type='text' />
+            <input class='input-underline ic1' type='text' />
             <br />
-            <input class='input-underline' type='text' />
+            <input class='input-underline ic2' type='text' />
           </p>
-          <p>
+          <p class='final-statement'>
             I swear that this inventory is a true and detailed account of all property
             taken by me on this search warrant.
           </p>
         </div>
         <div class='foot2 thick-top'>
-          <div class='sig-upper'>
-            <div class='sig-upper-left pull-left thin-right'>
-              SIGNATURE OF PERSON MAKING SEARCH
-              <b>
-                X
-              </b>
-              <input class='input-underline' type='text' />
+          <div class='sig-upper thin-bottom'>
+            <div class='sig-left pull-left thin-right'>
+              <p class='pfix'>
+                <label>
+                  SIGNATURE OF PERSON MAKING SEARCH
+                </label>
+                <p class='pfix'>
+                  <b>
+                    X
+                  </b>
+                  <input class='input-underline' type='text' />
+                </p>
+              </p>
             </div>
-            <div class='sig-upper-mid pull-left thin-left thin-right'>
-              DATE AND TIME OF SEARCH
-              <input type='text' />
+            <div class='sig-mid pull-left thin-left thin-right'>
+              <p class='pfix'>
+                <label>
+                  DATE AND TIME OF SEARCH
+                </label>
+                <p class='pfix'>
+                  <input class='sifix' type='text' />
+                </p>
+              </p>
             </div>
-            <div class='sig-upper-right pull-right thin-left'>
-              SWORN AND SUBSCRIBED TO BEFORE
+            <div class='sig-right pull-right thin-left'>
+              <label>
+                SWORN AND SUBSCRIBED TO BEFORE
+              </label>
+              <br />
               <b>
                 X
               </b>
@@ -560,17 +604,26 @@
               </label>
             </div>
           </div>
-          <div class='sig-lower'>
-            <div class='sig-lower-left'>
-              PRINTED NAME OF PERSON MAKING SEARCH
+          <div class='sig-lower thin-top'>
+            <div class='sig-left pull-left thin-right'>
+              <label>
+                PRINTED NAME OF PERSON MAKING SEARCH
+              </label>
+              <br />
               <input type='text' />
             </div>
-            <div class='sig-lower-mid'>
-              TITLE OF PERSON MAKING SEARCH
+            <div class='sig-mid pull-left thin-left thin-right'>
+              <label>
+                TITLE OF PERSON MAKING SEARCH
+              </label>
+              <br />
               <input type='text' />
             </div>
-            <div class='sig-lower-right'>
-              DATE SWORN AND SUBSCRIBED TO
+            <div class='sig-right pull-right thin-left'>
+              <label>
+                DATE SWORN AND SUBSCRIBED TO
+              </label>
+              <br />
               <input type='text' />
             </div>
           </div>
