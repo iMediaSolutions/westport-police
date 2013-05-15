@@ -1,52 +1,162 @@
+.p2 .foot
+{
+  .sig-upper-left
+  {
+    width: 49.5%;
+    padding-left: 0px;
+  }
+
+  .sig-upper-right
+  {
+    width: 50.25%;
+  }
+
+  .sig-bottom-left
+  {
+    width: 49.5%;
+    padding-left: 0px;
+  }
+
+  .sig-bottom-right
+  {
+    width: 50.25%;
+    padding-top: 0cm;
+  }
+
+  .sig-lower
+  {
+    height:55px;
+
+    div
+    {
+      height:100%;
+    }
+  }
+
+  .input-underline
+  {
+    width: 60%;
+  }
+}
+
 .foot
 {
 
-.sig-upper-left
-{
-  width:390px;
-  padding-left: 6px;
+  .sigapp-center
+  {
+    width: 9cm;
+    display: block;
+    text-align: center;
+  }
+
+  .sigdate-center
+  {
+    width: 5cm;
+    display: block;
+    text-align: center;
+  }
+
+  .sig-upper-left
+  {
+    width:390px;
+    padding-left: 6px;
+  }
+
+  .sig-upper-right
+  {
+    width:390px;
+  }
+
+  .sig-upper
+  {
+    height:50px;
+  }
+
+  .sig-upper > div
+  {
+    height: 97.6%;
+  }
+
+  .sig-lower
+  {
+    height:80px;
+  }
+
+  .centercontent
+  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sig-bottom-left
+  {
+    width: 60%;
+    padding-left: 2.37cm;
+  }
+
+  .sig-bottom-right
+  {
+    width: 29%;
+    padding-top: .3cm;
+  }
+
+  label
+  {
+    font-size: 7pt;
+  }
+
 }
 
-.sig-upper-right
+.foot2
 {
-  width:390px;
+  margin-top:5.5cm;
+
+  .sig-upper
+  {
+    height: 2cm;
+  }
+
+  .sig-left
+  {
+    width: 33%;
+  }
+
+  .sig-mid
+  {
+    width: 33%;
+  }
+
+  .sig-right
+  {
+    width: 33.5%
+  }
+
+  label
+  {
+    font-size: 7pt;
+  }
+
+  div
+  {
+    height: 2cm;
+  }
+
 }
 
-.sig-upper
+.ffix
 {
-  height:50px;
+  padding-top: .6cm;
 }
 
-.sig-upper > div
+.pfix
 {
-  height: 97.6%;
+  margin-top: .1cm;
+  margin-left: .3cm;
+  margin-bottom: .2cm;
 }
 
-.sig-lower
+.sifix
 {
-  height:80px;
-}
-
-.centercontent
-{
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.sig-bottom-left
-{
-  width: 60%;
-  padding-left: 25px;
-}
-
-.sig-bottom-right
-{
-  width: 29%;
-}
-
-label
-{
-  font-size: 7pt;
-}
-
+  height: 1.5em;
+  width: 90%;
 }

@@ -1,3 +1,29 @@
+.p2 .foot .sig-upper-left {
+  width: 49.5%;
+  padding-left: 0px; }
+.p2 .foot .sig-upper-right {
+  width: 50.25%; }
+.p2 .foot .sig-bottom-left {
+  width: 49.5%;
+  padding-left: 0px; }
+.p2 .foot .sig-bottom-right {
+  width: 50.25%;
+  padding-top: 0cm; }
+.p2 .foot .sig-lower {
+  height: 55px; }
+  .p2 .foot .sig-lower div {
+    height: 100%; }
+.p2 .foot .input-underline {
+  width: 60%; }
+
+.foot .sigapp-center {
+  width: 9cm;
+  display: block;
+  text-align: center; }
+.foot .sigdate-center {
+  width: 5cm;
+  display: block;
+  text-align: center; }
 .foot .sig-upper-left {
   width: 390px;
   padding-left: 6px; }
@@ -14,8 +40,36 @@
   margin-right: auto; }
 .foot .sig-bottom-left {
   width: 60%;
-  padding-left: 25px; }
+  padding-left: 2.37cm; }
 .foot .sig-bottom-right {
-  width: 29%; }
+  width: 29%;
+  padding-top: .3cm; }
 .foot label {
   font-size: 7pt; }
+
+.foot2 {
+  margin-top: 5.5cm; }
+  .foot2 .sig-upper {
+    height: 2cm; }
+  .foot2 .sig-left {
+    width: 33%; }
+  .foot2 .sig-mid {
+    width: 33%; }
+  .foot2 .sig-right {
+    width: 33.5%; }
+  .foot2 label {
+    font-size: 7pt; }
+  .foot2 div {
+    height: 2cm; }
+
+.ffix {
+  padding-top: .6cm; }
+
+.pfix {
+  margin-top: .1cm;
+  margin-left: .3cm;
+  margin-bottom: .2cm; }
+
+.sifix {
+  height: 1.5em;
+  width: 90%; }
