@@ -16,6 +16,7 @@
   <link href='css/main.css' rel='stylesheet' />
   <script src='js/vendor/jquery-1.9.1.min.js'></script>
   <script src='js/vendor/modernizr-2.6.2.min.js'></script>
+  <script src='js/main.js'></script>
   <body>
     <!--[if lt IE 7]>
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -202,7 +203,7 @@
                 PRINTED NAME OF APPLICANT
               </label>
               <br />
-              <input class='input-underline' name='16' type='text' />
+              <input class='input-underline' name='name-g' type='text' />
             </div>
             <div class='sig-upper-right pull-right'>
               <label for='17' name='17-1'>
@@ -260,17 +261,17 @@
             <div class='court thin-bottom header-right-upper'>
               <h2>TRIAL COURT OF MASSACHUSETTS</h2>
               <div class='header-input-box'>
-                <input class='box-underline' name='court_department' type='text' />
+                <input class='box-underline' name='court_department-g' readonly='readonly' type='text' />
                 <label for='court_department'>COURT DEPARTMENT</label>
               </div>
               <div class='header-input-box'>
-                <input class='box-underline' name='division' type='text' />
+                <input class='box-underline' name='division-g' readonly='readonly' type='text' />
                 <label for='division'>DIVISION</label>
               </div>
             </div>
             <div class='docket header-input-box thin-top'>
               <label for='position'>SEARCH WARRANT DOCKET NUMBER</label>
-              <input name='position' type='text' />
+              <input name='position-g' readonly='readonly' type='text' />
             </div>
           </div>
         </div>
@@ -290,44 +291,44 @@
               to believe that the property described below:
               <blockquote class='tight-paragraphs'>
                 <p>
-                  <input name='1' type='checkbox' />
+                  <input disabled='disabled' name='1-g' type='checkbox' />
                   <label for='1' name='1'>
                     has been stolen, embezzled, or obtained by false pretenses.
                   </label>
                 </p>
                 <p>
-                  <input name='2' type='checkbox' />
+                  <input disabled='disabled' name='2-g' type='checkbox' />
                   <label for='1' name='2'>
                     is intended for use or has been used as the means of committing a crime.
                   </label>
                 </p>
                 <p>
-                  <input name='3' type='checkbox' />
+                  <input disabled='disabled' name='3-g' type='checkbox' />
                   <label for='1' name='3'>
                     has been concealed to prevent a crime from being discovered.
                   </label>
                 </p>
                 <p>
-                  <input name='4' type='checkbox' />
+                  <input disabled='disabled' name='4-g' type='checkbox' />
                   <label for='1' name='4'>
                     is unlawfully possessed or concealed for an unlawful purpose.
                   </label>
                 </p>
                 <p>
-                  <input name='5' type='checkbox' />
+                  <input disabled='disabled' name='5-g' type='checkbox' />
                   <label for='1' name='5'>
                     is evidence of a crime or is evidence of criminal activity.
                   </label>
                 </p>
                 <p>
-                  <input name='6' type='checkbox' />
+                  <input disabled='disabled' name='6-g' type='checkbox' />
                   <label for='1' name='6'>
                     other
                     <i>
                       (specify)
                     </i>
                   </label>
-                  <input class='input-underline' name='6-1' type='text' />
+                  <input class='input-underline' name='6-1-g' readonly='readonly' type='text' />
                   <label for='1' name='6-1'></label>
                 </p>
               </blockquote>
@@ -339,25 +340,25 @@
               within a reasonable time and in no event later than seven days from the issuance of this search warrant
               to search for the following property:
               <p>
-                <textarea class='taform lines' name='7' rows='5'></textarea>
+                <textarea class='taform lines' name='7-g' readonly='readonly' rows='5'></textarea>
                 <ul>
                   <li>
-                    <input name='8' type='checkbox' />
+                    <input disabled='disabled' name='8-g' type='checkbox' />
                     at:
                     <br />
-                    <textarea class='taform lines' name='9' rows='2'></textarea>
+                    <textarea class='taform lines' name='9-g' readonly='readonly' rows='2'></textarea>
                   </li>
                   <li>
                     which is occupied by and/or in possession of:
-                    <textarea class='taform lines' name='10' rows='2'></textarea>
+                    <textarea class='taform lines' name='10-g' readonly='readonly' rows='2'></textarea>
                   </li>
                   <li>
-                    <input name='11' type='checkbox' />
+                    <input disabled='disabled' name='11-g' type='checkbox' />
                     on the person or in the possession of
                     <i>
                       (identify any specific person(s) to be searched):
                     </i>
-                    <input class='input-underline' name='12' type='text' />
+                    <input class='input-underline' name='12-g' readonly='readonly' type='text' />
                   </li>
                   <li>
                     <p>
@@ -442,12 +443,11 @@
                 <label>
                   FIRST OR ADMINISTRATIVE JUSTICE
                 </label>
-                <p class='pfix'>
-                  <b>
-                    WITNESS:
-                  </b>
-                  <input class='input-underline' type='text' />
-                </p>
+                <br />
+                <b>
+                  WITNESS:
+                </b>
+                <input class='input-underline' type='text' />
               </p>
             </div>
             <div class='sig-bottom-right pull-right thin-left'>
@@ -455,9 +455,79 @@
                 <label>
                   PRINTED NAMED OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
                 </label>
-                <p class='pfix'>
-                  <input class='sifix' type='text' />
+                <input class='sifix' type='text' />
+              </p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class='p3 border center aff' name='aff-1'>
+      <form action='' method='post'>
+        <div class='header thick-bottom'>
+          <div class='left pull-left thin-right section'>
+            <p>
+              Affidavit
+              <br />
+              In Support of Application
+              <br />
+              For Search Warrant
+            </p>
+          </div>
+          <div class='mid pull-left thin-right thin-left section'>
+            <p class='phfix'>
+              <label>
+                Search Warrant Docket Number
+              </label>
+              <input name='position-g' type='text' />
+            </p>
+          </div>
+          <div class='right pull-right thin-left section'>
+            <p class='phfix'>
+              <label>
+                Trial Court of Massachusetts
+              </label>
+              <input name='tcourt' type='text' />
+            </p>
+          </div>
+        </div>
+        <div class='survay-container'>
+          <textarea class='taform' name='aff-f-1' rows='40'></textarea>
+          <div class='foot'>
+            <div class='upper thick-top thin-bottom'>
+              <div class='left pull-left thin-right'>
+                <p>
+                  <label>
+                    Printed Name of Affiant
+                  </label>
+                  <br />
+                  <input name='paffi' type='text' />
                 </p>
+              </div>
+              <div class='right pull-right thin-left'>
+                <p>
+                  <label>
+                    Signed Under The Pains And Penalty of Perjury
+                  </label>
+                  <br />
+                  <input name='affsig' type='text' />
+                </p>
+              </div>
+            </div>
+            <div class='mid thin-bottom thin-top'></div>
+            <div class='lower thin-top'>
+              <p class='pfix'>
+                Signature of Justice, Clerk Magistrate or Assistant Clerk
+                <input name='affsig2' type='text' />
+                Date
+                <input name='date' type='text' />
+              </p>
+              <p class='center'>
+                Page
+                <input class='pnum' name='pn' readonly='readonly' type='text' value='1' />
+                of
+                <input class='pnum' name='mpage' readonly='readonly' type='text' value='1' />
+                Pages of this Affidavit
               </p>
             </div>
           </div>
@@ -591,40 +661,52 @@
               </p>
             </div>
             <div class='sig-right pull-right thin-left'>
-              <label>
-                SWORN AND SUBSCRIBED TO BEFORE
-              </label>
-              <br />
-              <b>
-                X
-              </b>
-              <input class='input-underline' type='text' />
-              <label>
-                Signature of Justice, Clerk-Magistrate or Assistant Clerk
-              </label>
+              <p class='pfix'>
+                <label>
+                  SWORN AND SUBSCRIBED TO BEFORE
+                </label>
+                <p class='pfix'>
+                  <b>
+                    X
+                  </b>
+                  <input class='input-underline' type='text' />
+                  <label>
+                    Signature of Justice, Clerk-Magistrate or Assistant Clerk
+                  </label>
+                </p>
+              </p>
             </div>
           </div>
           <div class='sig-lower thin-top'>
             <div class='sig-left pull-left thin-right'>
-              <label>
-                PRINTED NAME OF PERSON MAKING SEARCH
-              </label>
-              <br />
-              <input type='text' />
+              <p class='pfix'>
+                <label>
+                  PRINTED NAME OF PERSON MAKING SEARCH
+                </label>
+                <p class='pfix'>
+                  <input class='sifix' type='text' />
+                </p>
+              </p>
             </div>
             <div class='sig-mid pull-left thin-left thin-right'>
-              <label>
-                TITLE OF PERSON MAKING SEARCH
-              </label>
-              <br />
-              <input type='text' />
+              <p class='pfix'>
+                <label>
+                  TITLE OF PERSON MAKING SEARCH
+                </label>
+                <p class='pfix'>
+                  <input class='sifix' type='text' />
+                </p>
+              </p>
             </div>
             <div class='sig-right pull-right thin-left'>
-              <label>
-                DATE SWORN AND SUBSCRIBED TO
-              </label>
-              <br />
-              <input type='text' />
+              <p class='pfix'>
+                <label>
+                  DATE SWORN AND SUBSCRIBED TO
+                </label>
+                <p class='pfix'>
+                  <input class='sifix' type='text' />
+                </p>
+              </p>
             </div>
           </div>
         </div>

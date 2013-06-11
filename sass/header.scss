@@ -124,28 +124,134 @@ input {
 .p2
 {
   margin-top: 2cm;
+
+
+  .header
+  {
+    height: 3.55cm;
+  }
+
+  .header-left
+  {
+    height: 96.9%;
+    width: 11.34cm;
+  }
+
+  h1
+  {
+    text-align: center;
+  }
+
+  .title-span
+  {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-size: 12pt;
+  }
 }
 
-.p2 .header
+.p3
 {
-  height: 3.55cm;
-}
+  margin-top: 2cm;
 
-.p2 .header-left
-{
-  height: 96.9%;
-  width: 11.34cm;
-}
+  .upper
+  {
+    height: 1.5cm;
+  }
 
-.p2 h1
-{
-  text-align: center;
-}
+  .phfix
+  {
+    margin-top:0em;
+    margin-left:.2em;
+    input
+    {
+      padding-top:1.5em;
+      padding-bottom:1.5em;
+      width:99%;
+    }
+  }
 
-.p2 .title-span
-{
-  text-align: center;
-  display: block;
-  font-weight: bold;
-  font-size: 12pt;
+  .mid
+  {
+    height: 1cm;
+  }
+
+  .section
+  {
+    width: 33.15%;
+  }
+
+  .header
+  {
+    height:2.5cm;
+
+    div
+    {
+      height: 100%;
+    }
+    
+    .left
+    {
+      text-align:center;
+    }
+  }
+
+  textarea
+  {
+    width:99%;
+  }
+
+  .survay-container
+  {
+    margin-left: 0em;
+  }
+
+  .foot
+  {
+
+    label
+    {
+      font-size:12pt;
+    }
+
+    .upper
+    {
+      input
+      {
+        padding-left:1%;
+        margin-top:.5em;
+        width:99%;
+        font-size:14pt;
+      }
+    }
+
+    .lower
+    {
+      padding-top:.5em;
+    }
+
+    .left
+    {
+      width: 50%;
+      height: 100%;
+    }
+    
+    .right
+    {
+      height: 100%;
+      width:49.65%;
+    }
+    
+    p
+    {
+      margin-top: 0em;
+      margin-bottom:0em;
+    }
+
+    .center
+    {
+      text-align:center;
+    }
+  }
 }

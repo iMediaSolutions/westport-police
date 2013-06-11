@@ -80,6 +80,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 1cm;
   position: absolute;
   margin-left: 2cm;
+  top:.05cm;
 }
 
 .font-override
@@ -119,6 +120,7 @@ input[type=number]::-webkit-inner-spin-button {
 .p3ol .input-underline
 {
   width: 90%;
+  font-size:14pt;
 }
 
 .final-statement
@@ -145,4 +147,17 @@ input[type=number]::-webkit-inner-spin-button {
   margin-top: 1cm;
   margin-left: .3cm;
   margin-bottom: .2cm;
+}
+
+.aff
+{
+  .pnum
+  {
+    width: .5cm;
+  }
+
+  textarea
+  {
+    font-size:14pt;
+  }
 }

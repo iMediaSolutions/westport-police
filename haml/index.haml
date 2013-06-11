@@ -16,6 +16,7 @@
   %link{:href => "css/main.css", :rel => "stylesheet"}
   %script{:src => "js/vendor/jquery-1.9.1.min.js"}
   %script{:src => "js/vendor/modernizr-2.6.2.min.js"}
+  %script{:src => "js/main.js"}
   %body
     /[if lt IE 7]
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -161,7 +162,7 @@
               %label{:for => "16", :name =>"16-1"}
                 PRINTED NAME OF APPLICANT
               %br
-              %input.input-underline{:type => "text", :name => "16"}
+              %input.input-underline{:type => "text", :name => "name-g"}
             .sig-upper-right.pull-right
               %label{:for => "17", :name => "17-1"}
                 SIGNED UNDER THE PENALTIES OF PERJURY
@@ -201,15 +202,15 @@
             .court.thin-bottom.header-right-upper
               %h2 TRIAL COURT OF MASSACHUSETTS
               .header-input-box
-                %input.box-underline{:type => "text", :name => "court_department"}
+                %input.box-underline{:type => "text", :name => "court_department-g", :readonly => "readonly"}
                 %label{:for => "court_department"} COURT DEPARTMENT
               .header-input-box
-                %input.box-underline{:type => "text", :name => "division"}
+                %input.box-underline{:type => "text", :name => "division-g", :readonly => "readonly"}
                 %label{:for => "division"} DIVISION
 
             .docket.header-input-box.thin-top
               %label{:for => "position"} SEARCH WARRANT DOCKET NUMBER
-              %input{:type => "text", :name => "position"}
+              %input{:type => "text", :name => "position-g", :readonly => "readonly"}
         .survay-container
           .questions
             %p.font-override
@@ -223,32 +224,32 @@
               to believe that the property described below:
               %blockquote.tight-paragraphs
                 %p
-                  %input{:type => "checkbox", :name => "1"}
+                  %input{:type => "checkbox", :name => "1-g", :disabled => "disabled"}
                   %label{:for => "1", :name => "1"}
                     has been stolen, embezzled, or obtained by false pretenses.
                 %p
-                  %input{:type => "checkbox", :name => "2"}
+                  %input{:type => "checkbox", :name => "2-g", :disabled => "disabled"}
                   %label{:for => "1", :name => "2"}
                     is intended for use or has been used as the means of committing a crime.
                 %p
-                  %input{:type => "checkbox", :name => "3"}
+                  %input{:type => "checkbox", :name => "3-g", :disabled => "disabled"}
                   %label{:for => "1", :name => "3"}
                     has been concealed to prevent a crime from being discovered.
                 %p
-                  %input{:type => "checkbox", :name => "4"}
+                  %input{:type => "checkbox", :name => "4-g", :disabled => "disabled"}
                   %label{:for => "1", :name => "4"}
                     is unlawfully possessed or concealed for an unlawful purpose.
                 %p
-                  %input{:type => "checkbox", :name => "5"}
+                  %input{:type => "checkbox", :name => "5-g", :disabled => "disabled"}
                   %label{:for => "1", :name => "5"}
                     is evidence of a crime or is evidence of criminal activity.
                 %p
-                  %input{:type => "checkbox", :name => "6"}
+                  %input{:type => "checkbox", :name => "6-g", :disabled => "disabled"}
                   %label{:for => "1", :name => "6"}
                     other
                     %i
                       (specify)
-                  %input.input-underline{:type => "text", :name => "6-1"}
+                  %input.input-underline{:type => "text", :name => "6-1-g", :readonly => "readonly"}
                   %label{:for => "1", :name => "6-1"}
             %p
               %b
@@ -256,22 +257,22 @@
               within a reasonable time and in no event later than seven days from the issuance of this search warrant
               to search for the following property:
               %p
-                %textarea.taform.lines{:rows => "5", :name => "7"}
+                %textarea.taform.lines{:rows => "5", :name => "7-g", :readonly => "readonly"}
                 %ul
                   %li
-                    %input{:type => "checkbox", :name => "8"}
+                    %input{:type => "checkbox", :name => "8-g", :disabled => "disabled"}
                     at:
                     %br
-                    %textarea.taform.lines{:rows => "2", :name => "9"}
+                    %textarea.taform.lines{:rows => "2", :name => "9-g", :readonly => "readonly"}
                   %li
                     which is occupied by and/or in possession of:
-                    %textarea.taform.lines{:rows => "2", :name => "10"}
+                    %textarea.taform.lines{:rows => "2", :name => "10-g", :readonly => "readonly"}
                   %li
-                    %input{:type =>"checkbox", :name => "11"}
+                    %input{:type =>"checkbox", :name => "11-g", :disabled => "disabled"}
                     on the person or in the possession of
                     %i
                       (identify any specific person(s) to be searched):
-                    %input.input-underline{:type => "text", :name => "12"}
+                    %input.input-underline{:type => "text", :name => "12-g", :readonly => "readonly"}
                   %li
                     %p
                       You 
@@ -328,16 +329,64 @@
               %p.pfix
                 %label
                   FIRST OR ADMINISTRATIVE JUSTICE
-                %p.pfix
-                  %b
-                    WITNESS:
-                  %input.input-underline{:type => "text"}
+                %br
+                %b
+                  WITNESS:
+                %input.input-underline{:type => "text"}
             .sig-bottom-right.pull-right.thin-left
               %p.pfix
                 %label
                   PRINTED NAMED OF JUSTICE, CLERK-MAGISTRATE OR ASSISTANT CLERK
-                %p.pfix
-                  %input.sifix{:type => "text"}
+                %input.sifix{:type => "text"}
+    .p3.border.center.aff{:name => "aff-1"}
+      %form{:action => "", :method => "post"}
+        .header.thick-bottom
+          .left.pull-left.thin-right.section
+            %p
+              Affidavit
+              %br
+              In Support of Application
+              %br
+              For Search Warrant
+          .mid.pull-left.thin-right.thin-left.section
+            %p.phfix
+              %label
+                Search Warrant Docket Number
+              %input{:type => "text", :name => "position-g"}
+          .right.pull-right.thin-left.section
+            %p.phfix
+              %label
+                Trial Court of Massachusetts
+              %input{:type => "text", :name => "tcourt"}
+        .survay-container
+          %textarea.taform{:name => "aff-f-1", :rows => "40"}
+          .foot
+            .upper.thick-top.thin-bottom
+              .left.pull-left.thin-right
+                %p
+                  %label
+                    Printed Name of Affiant
+                  %br
+                  %input{:type => "text", :name => "paffi"}
+              .right.pull-right.thin-left
+                %p
+                  %label
+                    Signed Under The Pains And Penalty of Perjury
+                  %br
+                  %input{:type => "text", :name => "affsig"}
+            .mid.thin-bottom.thin-top
+            .lower.thin-top
+              %p.pfix
+                Signature of Justice, Clerk Magistrate or Assistant Clerk
+                %input{:type => "text", :name => "affsig2"}
+                Date
+                %input{:type => "text", :name => "date"}
+              %p.center
+                Page
+                %input.pnum{:type => "text", :readonly => "readonly", :value => '1', :name => 'pn'}
+                of
+                %input.pnum{:type => "text", :readonly => "readonly", :value => "1", :name => "mpage"}
+                Pages of this Affidavit
     .p2.border.center
       %form{:action => "", :method => "post"}
         .survay-container
@@ -425,30 +474,34 @@
                 %p.pfix
                   %input.sifix{:type => "text"}
             .sig-right.pull-right.thin-left
-              %label
-                SWORN AND SUBSCRIBED TO BEFORE
-              %br
-              %b
-                X
-              %input.input-underline{:type => "text"}
-              %label
-                Signature of Justice, Clerk-Magistrate or Assistant Clerk
+              %p.pfix
+                %label
+                  SWORN AND SUBSCRIBED TO BEFORE
+                %p.pfix
+                  %b
+                    X
+                  %input.input-underline{:type => "text"}
+                  %label
+                    Signature of Justice, Clerk-Magistrate or Assistant Clerk
           .sig-lower.thin-top
             .sig-left.pull-left.thin-right
-              %label
-                PRINTED NAME OF PERSON MAKING SEARCH
-              %br
-              %input{:type => "text"}
+              %p.pfix
+                %label
+                  PRINTED NAME OF PERSON MAKING SEARCH
+                %p.pfix
+                  %input.sifix{:type => "text"}
             .sig-mid.pull-left.thin-left.thin-right
-              %label
-                TITLE OF PERSON MAKING SEARCH
-              %br
-              %input{:type => "text"}
+              %p.pfix
+                %label
+                  TITLE OF PERSON MAKING SEARCH
+                %p.pfix
+                  %input.sifix{:type => "text"}
             .sig-right.pull-right.thin-left
-              %label
-                DATE SWORN AND SUBSCRIBED TO
-              %br
-              %input{:type => "text"}
+              %p.pfix
+                %label
+                  DATE SWORN AND SUBSCRIBED TO
+                %p.pfix
+                  %input.sifix{:type => "text"}
 
     -#:javascript
       window.jQuery || document.write('<\/script>')
