@@ -2,7 +2,7 @@
   color: #a34719;
   width: 8.5in;
   height: 11in;
-  border: 2px solid; }
+  border: 2px solid #a34719; }
 
 .center {
   margin-left: auto;
@@ -108,19 +108,61 @@ input {
 
 .p2 {
   margin-top: 2cm; }
+  .p2 .header {
+    height: 3.55cm; }
+  .p2 .header-left {
+    height: 96.9%;
+    width: 11.34cm; }
+  .p2 h1 {
+    text-align: center; }
+  .p2 .title-span {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    font-size: 12pt; }
 
-.p2 .header {
-  height: 3.55cm; }
-
-.p2 .header-left {
-  height: 96.9%;
-  width: 11.34cm; }
-
-.p2 h1 {
-  text-align: center; }
-
-.p2 .title-span {
-  text-align: center;
-  display: block;
-  font-weight: bold;
-  font-size: 12pt; }
+.p3 {
+  margin-top: 2cm; }
+  .p3 .upper {
+    height: 1.5cm; }
+  .p3 .phfix {
+    margin-top: 0em;
+    margin-left: .2em; }
+    .p3 .phfix input {
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+      width: 99%; }
+  .p3 .mid {
+    height: 1cm; }
+  .p3 .section {
+    width: 33.15%; }
+  .p3 .header {
+    height: 2.5cm; }
+    .p3 .header div {
+      height: 100%; }
+    .p3 .header .left {
+      text-align: center; }
+  .p3 textarea {
+    width: 99%; }
+  .p3 .survay-container {
+    margin-left: 0em; }
+  .p3 .foot label {
+    font-size: 12pt; }
+  .p3 .foot .upper input {
+    padding-left: 1%;
+    margin-top: .5em;
+    width: 99%;
+    font-size: 14pt; }
+  .p3 .foot .lower {
+    padding-top: .5em; }
+  .p3 .foot .left {
+    width: 50%;
+    height: 100%; }
+  .p3 .foot .right {
+    height: 100%;
+    width: 49.65%; }
+  .p3 .foot p {
+    margin-top: 0em;
+    margin-bottom: 0em; }
+  .p3 .foot .center {
+    text-align: center; }

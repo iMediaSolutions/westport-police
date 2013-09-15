@@ -22,6 +22,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .bare-input {
   border-style: none;
+  background-color: #FFFFFF;
 }
 .inline {
   display: inline;
@@ -41,7 +42,6 @@ input[type=number]::-webkit-inner-spin-button {
 {
   width:90%;
   resize: none;
-  overflow-y: hidden;
   border: 0px solid #ffffff;
   background-size: 100% 20px;
   line-height: 20px;
@@ -120,6 +120,8 @@ input[type=number]::-webkit-inner-spin-button {
 .p3ol .input-underline
 {
   width: 90%;
+  line-height:18pt;
+  font-size:14pt;
 }
 
 .final-statement
@@ -146,4 +148,17 @@ input[type=number]::-webkit-inner-spin-button {
   margin-top: 1cm;
   margin-left: .3cm;
   margin-bottom: .2cm;
+}
+
+.aff
+{
+  .pnum
+  {
+    width: .5cm;
+  }
+
+  textarea
+  {
+    font-size:14pt;
+  }
 }
