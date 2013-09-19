@@ -188,13 +188,19 @@ textarea {
     box-shadow: none !important;
     text-shadow: none !important; }
 
+  .border {
+    margin-top: 0cm; 
+  }
+  .seal {
+    top: 2.06cm;
+  }
   a,
   a:visited {
     text-decoration: underline; }
 
   a[href]:after {
     content: " (" attr(href) ")"; }
-
+  
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
