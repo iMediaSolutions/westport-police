@@ -5,6 +5,22 @@ $brown : #A34719;
   width: 8.5in;
   height: 11in;
   border: 2px solid $brown;
+  margin-top: 4cm;
+}
+.mtc-header {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 3px;
+  top: 0px;
+}
+@media print {
+  .border {
+    margin-top: 0cm; 
+  }
+  .mtc-header {
+    display: none;
+  }
 }
 .center {
   margin-left: auto;

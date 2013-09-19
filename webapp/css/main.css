@@ -174,7 +174,7 @@ textarea {
    ========================================================================== */
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
@@ -187,6 +187,12 @@ textarea {
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
+
+  .border {
+    margin-top: 0cm; }
+
+  .seal {
+    top: 2.06cm; }
 
   a,
   a:visited {
@@ -243,8 +249,22 @@ input {
   color: #a34719;
   width: 8.5in;
   height: 11in;
-  border: 2px solid #a34719; }
+  border: 2px solid #a34719;
+  margin-top: 4cm; }
 
+.mtc-header {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 3px;
+  top: 0px; }
+
+@media print {
+  .border {
+    margin-top: 0cm; }
+
+  .mtc-header {
+    display: none; } }
 .center {
   margin-left: auto;
   margin-right: auto; }
@@ -477,8 +497,11 @@ input[type=number]::-webkit-inner-spin-button {
   height: 1cm;
   position: absolute;
   margin-left: 2cm;
-  top: .05cm; }
+  top: 4.06cm; }
 
+@media print {
+  .seal {
+    top: 0.05cm; } }
 .font-override {
   font-size: 13pt; }
 

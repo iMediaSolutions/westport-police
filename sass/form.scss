@@ -80,7 +80,12 @@ input[type=number]::-webkit-inner-spin-button {
   height: 1cm;
   position: absolute;
   margin-left: 2cm;
-  top:.05cm;
+  top: 4.06cm;
+}
+@media print{
+  .seal {
+    top: 0.05cm;
+  }
 }
 
 .font-override
