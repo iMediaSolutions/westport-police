@@ -221,7 +221,7 @@ $(document).ready ->
       affnode = $(this)
     return
   $(document).mouseup ->
-    if(entereditmode == true)
+    if(entereditmode == true && editmode == false)
       editmode = true
       curpage = affnode.parent().parent().find("[name='pn']").val()
       affeditmode()

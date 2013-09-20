@@ -247,7 +247,7 @@ $(document).ready(function() {
     }
   });
   $(document).mouseup(function() {
-    if (entereditmode === true) {
+    if (entereditmode === true && editmode === false) {
       editmode = true;
       curpage = affnode.parent().parent().find("[name='pn']").val();
       affeditmode();
