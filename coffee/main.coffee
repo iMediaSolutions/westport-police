@@ -208,8 +208,8 @@ $(document).ready ->
       #recursive call to handle the rest
       if(extra.length > 0)
         extendaff(extra, startingpage)
-      editmode = false
-      entereditmode = false
+    editmode = false
+    entereditmode = false
     return
   $("[name='aff-f-1']").mousedown ->
     if(editmode == false)
