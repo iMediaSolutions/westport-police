@@ -155,8 +155,10 @@ extendaff = function(extra, priorpage) {
   npchild.attr('name', "aff-f-1");
   priorpage.after(newpage);
   leftovers = placenextline(newpage, extra);
+  console.log("Extending");
   maxpgrenum();
   if (leftovers.length > 0) {
+    console.log("Go the distance");
     extendaff(leftovers, newpage);
   }
 };
@@ -217,6 +219,7 @@ $(document).ready(function() {
   $("[name='aff-f-1']").focusout(function() {
     var extra, fs, startingpage;
     fs = pxtopt(parseInt($(this).css('font-size')));
+    console.log("before extend");
     while (this.scrollHeight > $(this).outerHeight() && fs !== lowerlim) {
       fs--;
       $(this).css('font-size', fs + 'pt');
@@ -233,6 +236,7 @@ $(document).ready(function() {
         extendaff(extra, startingpage);
       }
     }
+    console.log("after extend");
     editmode = false;
     entereditmode = false;
   });
@@ -247,6 +251,7 @@ $(document).ready(function() {
       editmode = true;
       curpage = affnode.parent().parent().find("[name='pn']").val();
       affeditmode();
+      console.log("end mouseupif");
     }
   });
   $(document).keydown(function() {

@@ -138,8 +138,10 @@ extendaff = (extra, priorpage) ->
   #npchild.val extra.substring(0,maxchar)
   #Update max pages on every affidavit page
   #priorpage.after newpage
+  console.log("Extending")
   maxpgrenum()
   if(leftovers.length > 0)
+    console.log("Go the distance")
     extendaff(leftovers, newpage)
   return
 
@@ -195,6 +197,7 @@ $(document).ready ->
       return
   $("[name='aff-f-1']").focusout ->
     fs = pxtopt(parseInt($(this).css('font-size')))
+    console.log("before extend")
     while(this.scrollHeight > $(this).outerHeight() && fs != lowerlim)
       fs--
       $(this).css('font-size', fs+'pt')
@@ -208,6 +211,7 @@ $(document).ready ->
       #recursive call to handle the rest
       if(extra.length > 0)
         extendaff(extra, startingpage)
+    console.log("after extend")
     editmode = false
     entereditmode = false
     return
@@ -221,6 +225,7 @@ $(document).ready ->
       editmode = true
       curpage = affnode.parent().parent().find("[name='pn']").val()
       affeditmode()
+      console.log("end mouseupif")
     return
   $(document).keydown ->
     if(event.which == 8 && !$(event.target).is("input, textarea"))
