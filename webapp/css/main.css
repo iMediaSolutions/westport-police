@@ -13,7 +13,7 @@ button,
 input,
 select,
 textarea {
-  color: #222; }
+  color: #a34719 !important; }
 
 body {
   font-size: 1em;
@@ -183,7 +183,6 @@ textarea {
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
@@ -246,7 +245,6 @@ input {
   font-size: 12pt; }
 
 .border {
-  color: #a34719;
   width: 8.5in;
   height: 11in;
   border: 2px solid #a34719;
