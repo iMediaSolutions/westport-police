@@ -1,4 +1,6 @@
 lowerlim = 9
+afflower = 12
+affupper = 14
 Upperlim = 12
 maxchar = 4600
 affpgcount = 1
@@ -178,23 +180,42 @@ $(document).ready ->
       $(this).prop("checked", true)
       return
   $(":input").keydown ->
-    if(this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth())
-      fontsize = parseInt($(this).css("font-size"), 10)
-      fontsize = pxtopt(fontsize)
-      if(fontsize > lowerlim)
-        $(this).css('font-size', (fontsize-1) + "pt")
-      return
-    else if(this.scrollHeight <= $(this).outerHeight() || this.scrollWidth < $(this).outerWidth())
-      fontsize = parseInt($(this).css("font-size"), 10)
-      fontsize = pxtopt(fontsize)
-      if(fontsize < Upperlim || ($(this).hasClass('taform') && fontsize < 14))
-        $(this).css('font-size', (fontsize+1) + "pt")
-      if(this.scrollWidth > $(this).outerWidth() || this.scrollHeight > $(this).outerHeight())
-          fontsize = parseInt($(this).css("font-size"), 10)
-          fontsize = pxtopt(fontsize)
-          if(fontsize > lowerlim)
-            $(this).css('font-size', (fontsize-1) + "pt")
-      return
+    if($(this).attr('name')!="aff-f-1")
+      if(this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth())
+        fontsize = parseInt($(this).css("font-size"), 10)
+        fontsize = pxtopt(fontsize)
+        if(fontsize > lowerlim)
+          $(this).css('font-size', (fontsize-1) + "pt")
+        return
+      else if(this.scrollHeight <= $(this).outerHeight() || this.scrollWidth < $(this).outerWidth())
+        fontsize = parseInt($(this).css("font-size"), 10)
+        fontsize = pxtopt(fontsize)
+        if(fontsize < Upperlim || ($(this).hasClass('taform') && fontsize < 14))
+          $(this).css('font-size', (fontsize+1) + "pt")
+        if(this.scrollWidth > $(this).outerWidth() || this.scrollHeight > $(this).outerHeight())
+            fontsize = parseInt($(this).css("font-size"), 10)
+            fontsize = pxtopt(fontsize)
+            if(fontsize > lowerlim)
+              $(this).css('font-size', (fontsize-1) + "pt")
+        return
+    else
+      if(this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth())
+        fontsize = parseInt($(this).css("font-size"), 10)
+        fontsize = pxtopt(fontsize)
+        if(fontsize > afflower)
+          $(this).css('font-size', (fontsize-1) + "pt")
+        return
+      else if(this.scrollHeight <= $(this).outerHeight() || this.scrollWidth < $(this).outerWidth())
+        fontsize = parseInt($(this).css("font-size"), 10)
+        fontsize = pxtopt(fontsize)
+        if(fontsize < affupper || ($(this).hasClass('taform') && fontsize < 14))
+          $(this).css('font-size', (fontsize+1) + "pt")
+        if(this.scrollWidth > $(this).outerWidth() || this.scrollHeight > $(this).outerHeight())
+            fontsize = parseInt($(this).css("font-size"), 10)
+            fontsize = pxtopt(fontsize)
+            if(fontsize > afflower)
+              $(this).css('font-size', (fontsize-1) + "pt")
+        return
   $("[name='aff-f-1']").focusout ->
     fs = pxtopt(parseInt($(this).css('font-size')))
     console.log("before extend")
