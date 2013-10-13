@@ -190,7 +190,7 @@ $(document).ready ->
       else if(this.scrollHeight <= $(this).outerHeight() || this.scrollWidth < $(this).outerWidth())
         fontsize = parseInt($(this).css("font-size"), 10)
         fontsize = pxtopt(fontsize)
-        if(fontsize < Upperlim || ($(this).hasClass('taform') && fontsize < 14))
+        if(fontsize < Upperlim || ($(this).hasClass('taform') && fontsize < 12))
           $(this).css('font-size', (fontsize+1) + "pt")
         if(this.scrollWidth > $(this).outerWidth() || this.scrollHeight > $(this).outerHeight())
             fontsize = parseInt($(this).css("font-size"), 10)

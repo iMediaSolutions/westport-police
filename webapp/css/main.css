@@ -670,6 +670,11 @@ input[type=number]::-webkit-inner-spin-button {
   margin-left: .3cm;
   margin-bottom: .2cm; }
 
+.pfix-center {
+  margin-top: .1cm;
+  margin-left: 1.3cm;
+  margin-bottom: .2cm; }
+
 .sifix {
   height: 1.5em;
   width: 90%; }
