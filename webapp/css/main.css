@@ -10,7 +10,6 @@
    ========================================================================== */
 html,
 button,
-input,
 select,
 textarea {
   color: #a34719 !important; }
@@ -242,7 +241,8 @@ ul {
   list-style-type: none; }
 
 input {
-  font-size: 12pt; }
+  font-size: 12pt;
+  color: #000 !important; }
 
 .border {
   width: 8.5in;

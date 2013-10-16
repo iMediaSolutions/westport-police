@@ -10,7 +10,6 @@
    ========================================================================== */
 html,
 button,
-input,
 select,
 textarea {
   color: #a34719 !important;
@@ -249,6 +248,7 @@ textarea {
   input
   {
     font-size: 12pt;
+    color:#000 !important;
   }
 @import "header";
 @import "form";
