@@ -89,7 +89,8 @@ input[type=number]::-webkit-inner-spin-button {
   margin-bottom: 0cm; }
 
 .p3l1 {
-  width: 7cm; }
+  width: 7cm;
+  text-align: center; }
 
 .p3l2 {
   width: 2cm; }
