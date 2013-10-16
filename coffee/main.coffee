@@ -1,4 +1,4 @@
-lowerlim = 9
+lowerlim = 10
 afflower = 12
 affupper = 14
 Upperlim = 12
