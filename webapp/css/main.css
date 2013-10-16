@@ -551,6 +551,9 @@ input[type=number]::-webkit-inner-spin-button {
 .aff textarea {
   font-size: 14pt; }
 
+.fplabelfix {
+  padding-left: 2cm; }
+
 .thin-bottom {
   border-bottom-width: 1px;
   border-color: #a34719;

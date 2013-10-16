@@ -122,3 +122,6 @@ input[type=number]::-webkit-inner-spin-button {
   width: .5cm; }
 .aff textarea {
   font-size: 14pt; }
+
+.fplabelfix {
+  padding-left: 2cm; }
