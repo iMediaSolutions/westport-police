@@ -139,15 +139,17 @@
                   %textarea.taform.lines{:rows => "2", :name => "10"}
                 %p
                   %input{:type => "checkbox", :name => "11"}
-                  on the person or in the possession of 
-                  %i
-                    (identify any specific person(s) to be searched):
+                  %label{:for=>"11"}
+                    on the person or in the possession of 
+                    %i
+                      (identify any specific person(s) to be searched):
                   %br
                   %input.input-underline{:type => "text", :name => "12"}
                 %p
                   %input{:type => "checkbox", :name => "13"}
-                  on any person present who may be found to have such property in his or her possession 
-                  or under his or her control or to whom such a property may have been delivered.
+                  %label{:for=>"13"}
+                    on any person present who may be found to have such property in his or her possession 
+                    or under his or her control or to whom such a property may have been delivered.
           %p
             THEREFORE, I respectfully request that the court issue a Warrant and order of seizure, authorizing the search of
             the above described place(s) and person(s), if any, to be searched, and directing that such property or evidence or
@@ -156,13 +158,15 @@
             %blockquote.tight-paragraphs
               %p
                 %input{:type => "checkbox", :name => "cr4"}
-                have previously submitted the same application.
+                %label{:for=>"cr4"}
+                  have previously submitted the same application.
               %p
                 %input{:type => "checkbox", :name => "cr4-c"}
-                Have
-                %b
-                  not
-                previously submitted the same application.
+                %label{:for=>"cr4-c"}
+                  Have
+                  %b
+                    not
+                  previously submitted the same application.
         .foot.ffix
           .sig-upper.thick-top.thin-bottom
             .sig-upper-left.pull-left.thin-right
@@ -268,7 +272,8 @@
                 %ul
                   %li
                     %input{:type => "checkbox", :name => "8", :disabled => "disabled"}
-                    at:
+                    %label{:for=>"8"}
+                      at:
                     %br
                     %textarea.taform.lines{:rows => "2", :name => "9", :readonly => "readonly"}
                   %li
@@ -276,33 +281,40 @@
                     %textarea.taform.lines{:rows => "2", :name => "10", :readonly => "readonly"}
                   %li
                     %input{:type =>"checkbox", :name => "11", :disabled => "disabled"}
-                    on the person or in the possession of
-                    %i
-                      (identify any specific person(s) to be searched):
+                    %label{:for=>"11"}
+                      on the person or in the possession of
+                      %i
+                        (identify any specific person(s) to be searched):
                     %input.input-underline{:type => "text", :name => "12", :readonly => "readonly"}
                   %li
                     %p
                       You 
                       %input{:type => "checkbox", :name=> "cr1"}
-                      are
-                      %input{:type => "checkbox", :name => "cr1-c"}
-                      are not   also authorized to conduct the search at any time during the night.
+                      %label{:for=>"cr1"}
+                        are
+                        %input{:type => "checkbox", :name => "cr1-c"}
+                        %label{:for=>"cr1-c"}
+                          are not   also authorized to conduct the search at any time during the night.
                   %li
                     %p
                       You 
                       %input{:type => "checkbox", :name=> "cr2"}
-                      are
-                      %input{:type => "checkbox", :name => "cr2-c"}
-                      are not   also authorized to enter the premises without announcement.
+                      %label{:for=>"cr2"}
+                        are
+                        %input{:type => "checkbox", :name => "cr2-c"}
+                        %label{:for=>"cr2-c"}
+                          are not   also authorized to enter the premises without announcement.
                   %li
                     %p
                       You 
                       %input{:type => "checkbox", :name => "cr3"}
-                      are
-                      %input{:type => "checkbox", :name => "cr3-c"}
-                      are not   also commanded to search any person present who may be found to have such
-                      property in his or her possession or under his or her control or to whom such property
-                      may have been delivered.
+                      %label{:for=>"cr3"}
+                        are
+                        %input{:type => "checkbox", :name => "cr3-c"}
+                        %label{:for=>"cr3-c"}
+                          are not   also commanded to search any person present who may be found to have such
+                          property in his or her possession or under his or her control or to whom such property
+                          may have been delivered.
                   %li
                     %p
                       %b
