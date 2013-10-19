@@ -199,23 +199,46 @@ $(document).ready(function() {
   });
   $(":input").keydown(function() {
     var fontsize;
-    if (this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth()) {
-      fontsize = parseInt($(this).css("font-size"), 10);
-      fontsize = pxtopt(fontsize);
-      if (fontsize > lowerlim) {
-        $(this).css('font-size', (fontsize - 1) + "pt");
+    if ($(this).attr('name') === "aff-f-1") {
+      if (this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth()) {
+        fontsize = parseInt($(this).css("font-size"), 10);
+        fontsize = pxtopt(fontsize);
+        if (fontsize > afflower) {
+          $(this).css('font-size', (fontsize - 1) + "pt");
+        }
+      } else if (this.scrollHeight <= $(this).outerHeight() || this.scrollWidth < $(this).outerWidth()) {
+        fontsize = parseInt($(this).css("font-size"), 10);
+        fontsize = pxtopt(fontsize);
+        if (fontsize < affupper || ($(this).hasClass('taform') && fontsize < 12)) {
+          $(this).css('font-size', (fontsize + 1) + "pt");
+        }
+        if (this.scrollWidth > $(this).outerWidth() || this.scrollHeight > $(this).outerHeight()) {
+          fontsize = parseInt($(this).css("font-size"), 10);
+          fontsize = pxtopt(fontsize);
+          if (fontsize > afflower) {
+            $(this).css('font-size', (fontsize - 1) + "pt");
+          }
+        }
       }
-    } else if (this.scrollHeight <= $(this).outerHeight() || this.scrollWidth < $(this).outerWidth()) {
-      fontsize = parseInt($(this).css("font-size"), 10);
-      fontsize = pxtopt(fontsize);
-      if (fontsize < Upperlim || ($(this).hasClass('taform') && fontsize < 12)) {
-        $(this).css('font-size', (fontsize + 1) + "pt");
-      }
-      if (this.scrollWidth > $(this).outerWidth() || this.scrollHeight > $(this).outerHeight()) {
+    } else {
+      if (this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth()) {
         fontsize = parseInt($(this).css("font-size"), 10);
         fontsize = pxtopt(fontsize);
         if (fontsize > lowerlim) {
           $(this).css('font-size', (fontsize - 1) + "pt");
+        }
+      } else if (this.scrollHeight <= $(this).outerHeight() || this.scrollWidth < $(this).outerWidth()) {
+        fontsize = parseInt($(this).css("font-size"), 10);
+        fontsize = pxtopt(fontsize);
+        if (fontsize < Upperlim || ($(this).hasClass('taform') && fontsize < 12)) {
+          $(this).css('font-size', (fontsize + 1) + "pt");
+        }
+        if (this.scrollWidth > $(this).outerWidth() || this.scrollHeight > $(this).outerHeight()) {
+          fontsize = parseInt($(this).css("font-size"), 10);
+          fontsize = pxtopt(fontsize);
+          if (fontsize > lowerlim) {
+            $(this).css('font-size', (fontsize - 1) + "pt");
+          }
         }
       }
     }
