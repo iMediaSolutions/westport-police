@@ -10,8 +10,7 @@
    ========================================================================== */
 html,
 button,
-select,
-textarea {
+select {
   color: #a34719 !important; }
 
 body {
@@ -239,6 +238,9 @@ textarea {
     page-break-after: avoid; } }
 ul {
   list-style-type: none; }
+
+textarea {
+  color: #000 !important; }
 
 input {
   font-size: 12pt;

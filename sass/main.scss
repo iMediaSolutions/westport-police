@@ -10,8 +10,7 @@
    ========================================================================== */
 html,
 button,
-select,
-textarea {
+select {
   color: #a34719 !important;
 }
 
@@ -243,6 +242,11 @@ textarea {
   ul
   {
     list-style-type: none;
+  }
+
+  textarea
+  {
+    color: #000 !important;
   }
 
   input
