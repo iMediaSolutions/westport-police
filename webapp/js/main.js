@@ -241,8 +241,12 @@ $(document).ready(function() {
         }
       }
     }
-    if (this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth()) {
-      if (fontsize <= afflower && $(this).attr('name') !== "aff-f-1") {
+    if (this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth() + 1) {
+      console.log(fontsize);
+      console.log(lowerlim);
+      console.log(this.scrollWidth);
+      console.log($(this).outerWidth());
+      if (fontsize <= lowerlim && $(this).attr('name') !== "aff-f-1") {
         $(this).val($(this).val().substring(0, $(this).val().length - 1));
       }
     }

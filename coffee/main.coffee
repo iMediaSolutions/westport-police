@@ -212,8 +212,8 @@ $(document).ready ->
             fontsize = pxtopt(fontsize)
             if(fontsize > lowerlim)
               $(this).css('font-size', (fontsize-1) + "pt")
-    if(this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth())
-      if(fontsize <= afflower && $(this).attr('name')!="aff-f-1")
+    if(this.scrollHeight > $(this).outerHeight() || this.scrollWidth > $(this).outerWidth()+1)
+      if(fontsize <= lowerlim && $(this).attr('name')!="aff-f-1")
         $(this).val($(this).val().substring(0,$(this).val().length-1))
     return
   $("[name='aff-f-1']").focusout ->
