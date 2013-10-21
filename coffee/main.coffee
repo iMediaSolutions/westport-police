@@ -70,11 +70,11 @@ placenextline = (page, text) ->
   #console.log(nline)
   if(affta.prop('scrollHeight') > affta.outerHeight())
     fs = pxtopt(parseInt($(this).css('font-size')))
-    while(this.scrollHeight > $(this).outerHeight() && fs != lowerlim)
+    while(this.scrollHeight > $(this).outerHeight() && fs != afflower)
       $(this).css('font-size', fs+'pt')
       fs--
-      if(fs < lowerlim)
-        fs = lowerlim
+      if(fs < afflower)
+        fs = afflower
     affta.val(oldval)
     if(affta.prop('scrollHeight') > affta.outerHeight())
       console.log("Error: Page Capacity Exceeded")
@@ -217,24 +217,25 @@ $(document).ready ->
         $(this).val($(this).val().substring(0,$(this).val().length-1))
     return
   $("[name='aff-f-1']").focusout ->
-    fs = pxtopt(parseInt($(this).css('font-size')))
-    console.log("before extend")
-    while(this.scrollHeight > $(this).outerHeight() && fs != lowerlim)
-      fs--
-      $(this).css('font-size', fs+'pt')
-      if(fs < lowerlim)
-        fs = lowerlim
-    if(this.scrollHeight > $(this).outerHeight())
-      affalltext = $(this).val()
-      $(this).val ""
-      startingpage = $("[name='aff-1']")
-      extra = placenextline(startingpage, affalltext)
-      #recursive call to handle the rest
-      if(extra.length > 0)
-        extendaff(extra, startingpage)
-    console.log("after extend")
-    editmode = false
-    entereditmode = false
+    for i in [0..1]
+      fs = pxtopt(parseInt($(this).css('font-size')))
+      console.log("before extend")
+      while(this.scrollHeight > $(this).outerHeight() && fs != afflower)
+        fs--
+        $(this).css('font-size', fs+'pt')
+        if(fs < afflower)
+          fs = afflower
+      if(this.scrollHeight > $(this).outerHeight())
+        affalltext = $(this).val()
+        $(this).val ""
+        startingpage = $("[name='aff-1']")
+        extra = placenextline(startingpage, affalltext)
+        #recursive call to handle the rest
+        if(extra.length > 0)
+          extendaff(extra, startingpage)
+      console.log("after extend")
+      editmode = false
+      entereditmode = false
     return
   $("[name='aff-f-1']").mousedown ->
     if(editmode == false)
